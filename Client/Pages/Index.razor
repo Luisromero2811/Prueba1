@@ -1,0 +1,70 @@
+﻿@page "/"
+<!--Para realizar una comparacion de fechas, DateTime.Today.Subtract(pelicula.FechaLanzamiento).Days <= 14 ejemplo de traerme el día de hoy y restarle 14 días para ver si ya paso de esos días o aún no-->
+<h3><b>Introducción a Blazor</b></h3>
+<p>Hola, esta es mi primera app con Blazor, hecho por @UtilidadesString.Transformar(nombre)</p>
+<p>Bienvenidos al sitio web dinamico hecho en @tecnologia.ToUpper() </p>
+<p>Soy estudiante en @tecnologias[0], @tecnologias[1], @tecnologias[2]</p>
+<p>Tengo una edad de @(20 +3)</p>
+<button @onclick=@(Clickbtn)>Presioname</button>
+
+<div>
+    <h3><b>Creacion de pelicula mediante clases</b></h3>
+    <h3>Pelicula</h3>
+    <p>El titulo de la pelicula es: @Justiciero.Titulo</p>
+    <p>La fecha de lanzamiento es: @Justiciero.Fecha_de_lanzamiento.ToString("dd MMM yyyy")</p>
+    <p>Tiene un costo de @Justiciero.costo_pelicula</p>
+</div>
+<div>
+    <h3><b>Obtencion de peliculas mediante bucle foreach haciendo uso de listas</b></h3>
+    <h3>Peliculas</h3>
+    
+    <ListadoPeliculas></ListadoPeliculas>
+
+</div>
+<!--<div>
+    <h3><b>Obtencion de peliculas usando bucle for con la misma lista de peliculas</b></h3>
+    <h3>Peliculas</h3>
+    @for (int i = 0; i < Peliculas.Count; i++)
+    {
+        <div>
+            <p>@(i+1))Titulo: <b>@Peliculas[i].Titulo</b></p>
+            <p>Fecha de lanzamiento: <b>@Peliculas[i]Fecha_de_lanzamiento.</b></p>
+            <p>Costo: <b>@Peliculas[i].costo_pelicula</b></p>
+        </div>
+    }
+</div>
+    -->
+@code
+{
+    //Asignacion de variable de tipo string con un valor de KARLA ROMERO
+    string nombre = "Karla Romero";
+    //Asignacion de variable tipo string con valor de BLAZOR
+    string tecnologia = "Blazor";
+
+    string[] tecnologias = { "JavaScript", "VueJS", "Laravel" };
+
+    //Funcion-Method de tipo void (no retorna nada solo hace funcion) al clickear
+    void Clickbtn()
+    {
+        Console.WriteLine("Me haz Clickeado desde la funcion del code");
+    }
+    //Variable construida de la clase BlazoPeliculas para guardar la construccion de la pelicula
+    BlazorPeliculas Justiciero { get { return obtenerPelicula(); } }
+    //Méthod construido de la clase BlazorPelicula para crear pelicula y despues mandarla a una variable
+    //Para las propiedades de la pelicula las formamos en la clase BlazorPeliculas, despues las tomamos para construir la pelicula, la guardamoos en una variable y la retornamos con get para su uso.
+    BlazorPeliculas obtenerPelicula()
+    {
+        return new BlazorPeliculas
+        {
+            Titulo = "El justiciero 2",
+            Fecha_de_lanzamiento = new DateTime(2022, 11, 28),
+            costo_pelicula = 200
+        };
+    }
+ 
+    //Propiedad o variable donde se guarda lo ligado al method obtenerPeliculas
+    List<BlazorPeliculas>? Peliculas { get; set; }
+
+   
+
+}

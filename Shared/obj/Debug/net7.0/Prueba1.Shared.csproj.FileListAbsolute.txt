@@ -1,0 +1,12 @@
+/Users/sistemas/Desktop/Folder LuisRomero/Prueba1/Prueba1/Shared/bin/Debug/net7.0/Prueba1.Shared.deps.json
+/Users/sistemas/Desktop/Folder LuisRomero/Prueba1/Prueba1/Shared/bin/Debug/net7.0/Prueba1.Shared.dll
+/Users/sistemas/Desktop/Folder LuisRomero/Prueba1/Prueba1/Shared/bin/Debug/net7.0/Prueba1.Shared.pdb
+/Users/sistemas/Desktop/Folder LuisRomero/Prueba1/Prueba1/Shared/obj/Debug/net7.0/Prueba1.Shared.csproj.AssemblyReference.cache
+/Users/sistemas/Desktop/Folder LuisRomero/Prueba1/Prueba1/Shared/obj/Debug/net7.0/Prueba1.Shared.GeneratedMSBuildEditorConfig.editorconfig
+/Users/sistemas/Desktop/Folder LuisRomero/Prueba1/Prueba1/Shared/obj/Debug/net7.0/Prueba1.Shared.AssemblyInfoInputs.cache
+/Users/sistemas/Desktop/Folder LuisRomero/Prueba1/Prueba1/Shared/obj/Debug/net7.0/Prueba1.Shared.AssemblyInfo.cs
+/Users/sistemas/Desktop/Folder LuisRomero/Prueba1/Prueba1/Shared/obj/Debug/net7.0/Prueba1.Shared.csproj.CoreCompileInputs.cache
+/Users/sistemas/Desktop/Folder LuisRomero/Prueba1/Prueba1/Shared/obj/Debug/net7.0/Prueba1.Shared.dll
+/Users/sistemas/Desktop/Folder LuisRomero/Prueba1/Prueba1/Shared/obj/Debug/net7.0/refint/Prueba1.Shared.dll
+/Users/sistemas/Desktop/Folder LuisRomero/Prueba1/Prueba1/Shared/obj/Debug/net7.0/Prueba1.Shared.pdb
+/Users/sistemas/Desktop/Folder LuisRomero/Prueba1/Prueba1/Shared/obj/Debug/net7.0/ref/Prueba1.Shared.dll
