@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "eL+3JJeeH0Nl84XLnkBLQCqeMarcVhBklVcWyee/WyI=",
+  "Hash": "atsAJUeHPQi8kyKMBnlyIv/1fYOijaiKiZWJCnpsefc=",
   "Source": "Prueba1.Server",
   "BasePath": "_content/Prueba1.Server",
   "Mode": "Default",
@@ -7269,6 +7269,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/index.html"
+    },
+    {
+      "Identity": "/Users/sistemas/Desktop/Folder LuisRomero/Prueba1/Prueba1/Client/wwwroot/js/Utilidades.js",
+      "SourceId": "Prueba1.Client",
+      "SourceType": "Project",
+      "ContentRoot": "/Users/sistemas/Desktop/Folder LuisRomero/Prueba1/Prueba1/Client/wwwroot/",
+      "BasePath": "/",
+      "RelativePath": "js/Utilidades.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/js/Utilidades.js"
     },
     {
       "Identity": "/Users/sistemas/Desktop/Folder LuisRomero/Prueba1/Prueba1/Client/wwwroot/manifest.json",

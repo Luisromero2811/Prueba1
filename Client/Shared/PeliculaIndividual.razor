@@ -1,0 +1,33 @@
+﻿@if (Pelicula.costo_pelicula > 200)
+{
+    <span><b>Esta muy cara</b></span>
+}
+<div>
+    <p>El titulo de la pelicula es: @Pelicula.Titulo</p>
+    <p>La fecha de lanzamiento es: @Pelicula.Fecha_de_lanzamiento.ToString("dd MMM yyyy")</p>
+
+    <p>El costo de la pelicula es: @Pelicula.costo_pelicula</p>
+    @if (MostrarBotones)
+    {
+        <div>
+            <button @onclick="@(() => EliminarPelicula.InvokeAsync(Pelicula))">Erase</button>
+        </div>
+    }
+
+</div>
+
+@code {
+    [Parameter]
+    [EditorRequired]
+    public BlazorPeliculas Pelicula { get; set; } = null!;
+    /*void Eliminar()
+    {
+        Console.WriteLine("Eliminando la pelicula");
+    }*/
+    [Parameter]
+    public bool MostrarBotones { get; set; } = false;
+    [Parameter]
+    public EventCallback<BlazorPeliculas> EliminarPelicula { get; set; }
+
+}
+

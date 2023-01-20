@@ -5,6 +5,7 @@
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <ServiceWorkerAssetsManifest>service-worker-assets.js</ServiceWorkerAssetsManifest>
+    <UserSecretsId>4b3281b9-fadd-4335-a765-b168f2dbd3c7</UserSecretsId>
   </PropertyGroup>
 
   <PropertyGroup Condition=" '$(RunConfiguration)' == 'https' ">
@@ -28,8 +29,14 @@
 
   <ItemGroup>
     <None Remove="UtilidadesGlobales\" />
+    <None Remove="Repositorios\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="UtilidadesGlobales\" />
+    <Folder Include="Repositorios\" />
+    <Folder Include="wwwroot\js\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Remove="wwwroot\js\" />
   </ItemGroup>
 </Project>

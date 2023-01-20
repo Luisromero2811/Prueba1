@@ -85,6 +85,10 @@
       "PackagePath": "staticwebassets/index.html"
     },
     {
+      "Id": "/Users/sistemas/Desktop/Folder LuisRomero/Prueba1/Prueba1/Client/wwwroot/js/Utilidades.js",
+      "PackagePath": "staticwebassets/js/Utilidades.js"
+    },
+    {
       "Id": "/Users/sistemas/Desktop/Folder LuisRomero/Prueba1/Prueba1/Client/wwwroot/manifest.json",
       "PackagePath": "staticwebassets/manifest.json"
     },

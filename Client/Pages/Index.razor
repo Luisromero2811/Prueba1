@@ -1,10 +1,11 @@
 ﻿@page "/"
+@inject IRepositorio repositorio
 <!--Para realizar una comparacion de fechas, DateTime.Today.Subtract(pelicula.FechaLanzamiento).Days <= 14 ejemplo de traerme el día de hoy y restarle 14 días para ver si ya paso de esos días o aún no-->
 <h3><b>Introducción a Blazor</b></h3>
 <p>Hola, esta es mi primera app con Blazor, hecho por @UtilidadesString.Transformar(nombre)</p>
 <p>Bienvenidos al sitio web dinamico hecho en @tecnologia.ToUpper() </p>
 <p>Soy estudiante en @tecnologias[0], @tecnologias[1], @tecnologias[2]</p>
-<p>Tengo una edad de @(20 +3)</p>
+<p>Tengo una edad de @(20 + 3)</p>
 <button @onclick=@(Clickbtn)>Presioname</button>
 
 <div>
@@ -17,14 +18,14 @@
 <div>
     <h3><b>Obtencion de peliculas mediante bucle foreach haciendo uso de listas</b></h3>
     <h3>Peliculas</h3>
-    
-    <ListadoPeliculas></ListadoPeliculas>
+    <button @onclick="LimpiarPeliculas">Limpiar Peliculas</button>
+    <ListadoPeliculas @ref="listadopeliculas" Peliculas="Peliculas">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/b/b1/Loading_icon.gif?20151024034921" />
+    </ListadoPeliculas>
 
 </div>
-<!--<div>
-    <h3><b>Obtencion de peliculas usando bucle for con la misma lista de peliculas</b></h3>
-    <h3>Peliculas</h3>
-    @for (int i = 0; i < Peliculas.Count; i++)
+
+<!--@for(int i =0; i<BlazorPeliculas.Count; i++)
     {
         <div>
             <p>@(i+1))Titulo: <b>@Peliculas[i].Titulo</b></p>
@@ -61,10 +62,27 @@
             costo_pelicula = 200
         };
     }
- 
-    //Propiedad o variable donde se guarda lo ligado al method obtenerPeliculas
-    List<BlazorPeliculas>? Peliculas { get; set; }
 
-   
+
+
+    //Propiedad o variable donde se guarda lo ligado al method obtenerPeliculas
+    //List<BlazorPeliculas>? Peliculas { get; set; }
+
+    public List<BlazorPeliculas>? Peliculas { get; set; }
+    public ListadoPeliculas? listadopeliculas;
+
+    private void LimpiarPeliculas()
+    {
+        listadopeliculas!.LimpiarPeliculass();
+    }
+    protected override void OnInitialized()
+    {
+        Peliculas = repositorio.obtenerPeliculas();
+        
+    }
+
+
+    //LISTADO DE VARIAS PELICULAS USANDO LAS MISMAS PROPIEDADES DE SU CLASE
+
 
 }

@@ -1,8 +1,8 @@
 ﻿@page "/counter"
-
+@inject IJSRuntime js 
 <PageTitle>Counter</PageTitle>
 
-<h1>Counter</h1>
+<h1 class="titulo">Counter</h1>
 
 <p role="status">Current count: @currentCount</p>
 
@@ -11,14 +11,37 @@
 
 <div>
     <p>Segunda parte de curso de Blazor</p>
-    <ListadoPeliculas></ListadoPeliculas>
+    <div>
+        <ListadoPeliculas Peliculas="obtenerPeliculas()"></ListadoPeliculas>
+    </div>
 </div>
 @code {
-    private int currentCount = 0;
 
-    private void IncrementCount()
+    private int currentCount = 0;
+    private static int currentCountStatic = 0;
+    private async Task IncrementCount()
     {
         currentCount++;
+        currentCountStatic = currentCount;
+        await js.InvokeVoidAsync("pruebaPuntoNetStatic");
     }
+    [JSInvokable]
+    public static Task<int> ObtenerCurrentCount()
+    {
+        return Task.FromResult(currentCountStatic);
+    }
+
+
+    //LISTADO DE VARIAS PELICULAS USANDO LAS MISMAS PROPIEDADES DE SU CLASE
+    List<BlazorPeliculas> obtenerPeliculas()
+    {
+        return new List<BlazorPeliculas>()
+{
+            new BlazorPeliculas{ Titulo = "Stand and Deliver", costo_pelicula = 200, Fecha_de_lanzamiento = new DateTime(2020,11,28)},
+            new BlazorPeliculas{ Titulo = "Avengers End Game", costo_pelicula = 20, Fecha_de_lanzamiento = new DateTime(2020,11,29)},
+            new BlazorPeliculas{ Titulo = "Justiciero", costo_pelicula = 2600, Fecha_de_lanzamiento = new DateTime(2020,11,27)},
+        };
+    }
+
 }
 

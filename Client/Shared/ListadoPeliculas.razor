@@ -1,47 +1,86 @@
-﻿@if (Peliculas is null)
+﻿@inject IJSRuntime js
+
+@if (Peliculas is null)
 {
     <p>Cargando las peliculas</p>
-    <img src="https://upload.wikimedia.org/wikipedia/commons/b/b1/Loading_icon.gif?20151024034921" />
+    @ChildContent
+
 }
 else if (Peliculas.Count == 0)
 {
     <p>No hay peliculas</p>
+
 }
 else
 {
+    <input type="checkbox" @bind="MostrarBotones" />
+    <span>Mostrar botones</span>
+
+
     @foreach (var pelicula in Peliculas)
     {
-        @if (pelicula.costo_pelicula > 200)
-        {
-            <span style="color: red;"><b>Esta muy cara</b></span>
-        }
-        <div>
-            <p>El titulo de la pelicula es: @pelicula.Titulo</p>
-            <p>La fecha de lanzamiento es: @pelicula.Fecha_de_lanzamiento.ToString("dd MMM yyyy")</p>
+        <PeliculaIndividual Pelicula="pelicula"
+                            EliminarPelicula="EliminarPelicula"
+                            MostrarBotones="MostrarBotones">
 
-            <p>El costo de la pelicula es: @pelicula.costo_pelicula</p>
-        </div>
+        </PeliculaIndividual>
     }
+
 }
 @code {
 
+    [Parameter]
+    [EditorRequired]
+    //Con [EditorRequired] declaramos que el parametro enviado, el componente lo tiene que recibir de forma obligatoria
     public List<BlazorPeliculas>? Peliculas { get; set; }
+    [Parameter]
+    public RenderFragment ChildContent { get; set; } = null!;
+    bool MostrarBotones = false;
     //Method para ejecutar funcion inmediata cuando inicialize-cargue el componente en el navegador, ejemplo: cuando cargue el componente podemos dar un mensaje de espera para despues mostrar el contenido
-    protected override async Task OnInitializedAsync()
+    /*protected override async Task OnInitializedAsync()
     {
         await Task.Delay(3000);
         Peliculas = obtenerPeliculas();
         //Peliculas = new List<BlazorPeliculas>();
-    }
-    //LISTADO DE VARIAS PELICULAS USANDO LAS MISMAS PROPIEDADES DE SU CLASE
-    List<BlazorPeliculas> obtenerPeliculas()
+    }*/
+    private async Task EliminarPelicula(BlazorPeliculas pelicula)
     {
-        return new List<BlazorPeliculas>()
-{
-            new BlazorPeliculas{ Titulo = "Spider No Way Home", costo_pelicula = 200, Fecha_de_lanzamiento = new DateTime(2020,11,28)},
-            new BlazorPeliculas{ Titulo = "American Me", costo_pelicula = 20, Fecha_de_lanzamiento = new DateTime(2020,11,29)},
-            new BlazorPeliculas{ Titulo = "Sangre por Sangre", costo_pelicula = 2600, Fecha_de_lanzamiento = new DateTime(2020,11,27)},
-        };
+        var confirmado = await js.InvokeAsync<bool>("confirm",
+            $"Desea borrar la pelicula {pelicula.Titulo}?");
+        if (confirmado)
+        {
+            Peliculas!.Remove(pelicula);
+        }
+
+
     }
+
+    public void LimpiarPeliculass()
+    {
+        if (Peliculas is not null)
+        {
+            Peliculas.Clear();
+        }
+    }
+     protected override void OnInitialized()
+     {
+         Console.WriteLine("OnInitialized");
+     }
+    /*
+    protected override void OnParametersSet()
+    {
+        Console.WriteLine("OnParameterSet");
+    }
+    protected override void OnAfterRender(bool firstRender)
+    {
+        Console.WriteLine("OnAfterRender" + firstRender);
+    }
+    protected override bool ShouldRender()
+    {
+        Console.WriteLine("ShouldRender");
+        return true;
+    }
+    */
+
 }
 
