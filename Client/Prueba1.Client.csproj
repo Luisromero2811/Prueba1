@@ -30,11 +30,17 @@
   <ItemGroup>
     <None Remove="UtilidadesGlobales\" />
     <None Remove="Repositorios\" />
+    <None Remove="Pages\Peliculas\" />
+    <None Remove="Pages\Generos\" />
+    <None Remove="Pages\Actores\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="UtilidadesGlobales\" />
     <Folder Include="Repositorios\" />
     <Folder Include="wwwroot\js\" />
+    <Folder Include="Pages\Peliculas\" />
+    <Folder Include="Pages\Generos\" />
+    <Folder Include="Pages\Actores\" />
   </ItemGroup>
   <ItemGroup>
     <Content Remove="wwwroot\js\" />

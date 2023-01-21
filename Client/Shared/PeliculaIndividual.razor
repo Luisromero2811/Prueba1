@@ -1,33 +1,34 @@
-﻿@if (Pelicula.costo_pelicula > 200)
-{
-    <span><b>Esta muy cara</b></span>
-}
-<div>
-    <p>El titulo de la pelicula es: @Pelicula.Titulo</p>
-    <p>La fecha de lanzamiento es: @Pelicula.Fecha_de_lanzamiento.ToString("dd MMM yyyy")</p>
-
-    <p>El costo de la pelicula es: @Pelicula.costo_pelicula</p>
-    @if (MostrarBotones)
-    {
-        <div>
-            <button @onclick="@(() => EliminarPelicula.InvokeAsync(Pelicula))">Erase</button>
-        </div>
-    }
-
+﻿
+<div class="me-2 mb-2" style="text-align: center;">
+    <a href="@urlPelicula">
+        <img src="@Pelicula.poster" style="width: 226px; height:300px;" />
+    </a>
+    <p style="max-width: 226px; height:44px; font-size: 16px; font-weight: bold;">
+        <a href="@urlPelicula" class="text-decoration-none">
+            @Pelicula.Titulo
+        </a>
+    </p>
+    <div>
+        <a class="btn btn-info">Editar</a>
+        <button class="btn btn-danger" type="button"
+                @onclick=@(() => EliminarPelicula.InvokeAsync(Pelicula))>
+            Borrar
+        </button>
+    </div>
 </div>
 
 @code {
     [Parameter]
     [EditorRequired]
     public BlazorPeliculas Pelicula { get; set; } = null!;
-    /*void Eliminar()
-    {
-        Console.WriteLine("Eliminando la pelicula");
-    }*/
-    [Parameter]
-    public bool MostrarBotones { get; set; } = false;
     [Parameter]
     public EventCallback<BlazorPeliculas> EliminarPelicula { get; set; }
+
+    private string urlPelicula = string.Empty;
+    protected override void OnInitialized()
+    {
+        urlPelicula = $"pelicula/";
+    }
 
 }
 
