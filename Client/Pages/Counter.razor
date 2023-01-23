@@ -1,5 +1,6 @@
 ﻿@page "/counter"
-<PageTitle>Counter</PageTitle>
+
+<PageTitle>Counter1</PageTitle>
 
 <h1>Counter</h1>
 
@@ -8,12 +9,19 @@
 <button class="btn btn-primary" @onclick="IncrementCount">Click me</button>
 
 @code {
-
+   
     private int currentCount = 0;
-    private void IncrementCount()
+    [Inject] public IJSRuntime js { get; set; }
+
+    private async Task IncrementCount()
     {
+        var arreglo = new double[] { 1, 2, 3, 4 };
+        var max = arreglo.Maximum();
+        var min = arreglo.Minimum();
+
+        await js.InvokeVoidAsync("alert", $"El max es: {max} y el min es: {min}");
         currentCount++;
-        
-    }    
+
+    }
 }
 

@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
 using Prueba1.Client;
 using Prueba1.Client.Repositorios;
+using CurrieTechnologies.Razor.SweetAlert2;
 
 var builder = WebAssemblyHostBuilder.CreateDefault(args);
 builder.RootComponents.Add<App>("#app");
@@ -15,5 +16,7 @@ ConfigureServices(builder.Services);
 await builder.Build().RunAsync();
 void ConfigureServices(IServiceCollection services)
 {
+    services.AddSweetAlert2();
     services.AddSingleton<IRepositorio, Repositorio>();
+    
 }

@@ -16,6 +16,26 @@
           "Prueba1.Server.dll": {}
         }
       },
+      "CurrieTechnologies.Razor.SweetAlert2/5.4.0": {
+        "dependencies": {
+          "Microsoft.AspNetCore.Components": "7.0.1",
+          "Microsoft.AspNetCore.Components.Web": "7.0.1"
+        },
+        "runtime": {
+          "lib/net7.0/CurrieTechnologies.Razor.SweetAlert2.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "MathNet.Numerics/5.0.0": {
+        "runtime": {
+          "lib/net6.0/MathNet.Numerics.dll": {
+            "assemblyVersion": "5.0.0.0",
+            "fileVersion": "5.0.0.0"
+          }
+        }
+      },
       "Microsoft.AspNetCore.Authorization/7.0.1": {
         "dependencies": {
           "Microsoft.AspNetCore.Metadata": "7.0.1",
@@ -202,6 +222,8 @@
       },
       "Prueba1.Client/1.0.0": {
         "dependencies": {
+          "CurrieTechnologies.Razor.SweetAlert2": "5.4.0",
+          "MathNet.Numerics": "5.0.0",
           "Microsoft.AspNetCore.Components.WebAssembly": "7.0.1",
           "Prueba1.Shared": "1.0.0"
         },
@@ -221,6 +243,20 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "CurrieTechnologies.Razor.SweetAlert2/5.4.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-gDHNb0xG7+KNJ8DBSQXZb6ZF9YCMUK6EoUc6uQSPAduF8+QvJPxbRL0WjaMv/TtGuuj80QWlQPzD3noi9eddzQ==",
+      "path": "currietechnologies.razor.sweetalert2/5.4.0",
+      "hashPath": "currietechnologies.razor.sweetalert2.5.4.0.nupkg.sha512"
+    },
+    "MathNet.Numerics/5.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-pg1W2VwaEQMAiTpGK840hZgzavnqjlCMTVSbtVCXVyT+7AX4mc1o89SPv4TBlAjhgCOo9c1Y+jZ5m3ti2YgGgA==",
+      "path": "mathnet.numerics/5.0.0",
+      "hashPath": "mathnet.numerics.5.0.0.nupkg.sha512"
     },
     "Microsoft.AspNetCore.Authorization/7.0.1": {
       "type": "package",

@@ -20,6 +20,18 @@ build_property._RazorSourceGeneratorDebug =
 build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
+[/Users/sistemas/Desktop/Folder LuisRomero/Prueba1/Prueba1/Client/Pages/Actores/CrearActor.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQWN0b3Jlcy9DcmVhckFjdG9yLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/sistemas/Desktop/Folder LuisRomero/Prueba1/Prueba1/Client/Pages/Actores/EditarActor.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQWN0b3Jlcy9FZGl0YXJBY3Rvci5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/sistemas/Desktop/Folder LuisRomero/Prueba1/Prueba1/Client/Pages/Actores/IndiceActores.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQWN0b3Jlcy9JbmRpY2VBY3RvcmVzLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
 [/Users/sistemas/Desktop/Folder LuisRomero/Prueba1/Prueba1/Client/Pages/FetchData.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvRmV0Y2hEYXRhLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
@@ -32,6 +44,14 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvR2VuZXJvcy9FZGl0YXJHZW5lcm9zLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
+[/Users/sistemas/Desktop/Folder LuisRomero/Prueba1/Prueba1/Client/Pages/Generos/FormularioGenero.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvR2VuZXJvcy9Gb3JtdWxhcmlvR2VuZXJvLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/sistemas/Desktop/Folder LuisRomero/Prueba1/Prueba1/Client/Pages/Generos/IndiceGeneros.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvR2VuZXJvcy9JbmRpY2VHZW5lcm9zLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
 [/Users/sistemas/Desktop/Folder LuisRomero/Prueba1/Prueba1/Client/Pages/Index.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvSW5kZXgucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
@@ -42,6 +62,14 @@ build_metadata.AdditionalFiles.CssScope =
 
 [/Users/sistemas/Desktop/Folder LuisRomero/Prueba1/Prueba1/Client/Pages/Peliculas/EditarPelicula.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvUGVsaWN1bGFzL0VkaXRhclBlbGljdWxhLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/sistemas/Desktop/Folder LuisRomero/Prueba1/Prueba1/Client/Pages/Peliculas/FiltroPeliculas.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvUGVsaWN1bGFzL0ZpbHRyb1BlbGljdWxhcy5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/sistemas/Desktop/Folder LuisRomero/Prueba1/Prueba1/Client/Pages/Peliculas/VisualizarPelicula.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvUGVsaWN1bGFzL1Zpc3VhbGl6YXJQZWxpY3VsYS5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
 [/Users/sistemas/Desktop/Folder LuisRomero/Prueba1/Prueba1/Client/Shared/ListadoGenerico.razor]

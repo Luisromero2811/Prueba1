@@ -1,0 +1,68 @@
+﻿@inject SweetAlertService swal 
+
+
+<NavigationLock OnBeforeInternalNavigation="OnBeforeInternalNavigation"></NavigationLock>
+
+<EditForm EditContext="editContext" OnValidSubmit="OnValidSubmit">
+    <DataAnnotationsValidator></DataAnnotationsValidator>
+    <div class="mb-3">
+        <label>Nombre</label>
+        <div>
+            <!--Con el bind-value estamos sincronizando el valor del Input con el valor de propiedad o campo Nombre de la variable Genero-->
+            <InputText class="form-control" @bind-Value="@Genero.Nombre">
+            </InputText>
+            <ValidationMessage For="@(() => Genero.Nombre)"></ValidationMessage>
+        </div>
+    </div>
+    <button class="btn btn-success" type="submit">Guardar Cambios</button>
+</EditForm>
+
+@code {
+    private EditContext editContext = null!;
+    protected override void OnInitialized()
+    {
+        editContext = new(Genero);
+    }
+    [EditorRequired]
+    [Parameter]
+    public Genero Genero { get; set; } = null!;
+
+    [EditorRequired]
+    [Parameter]
+    public EventCallback OnValidSubmit { get; set; }
+
+    public bool FormularioPosteadoConExito { get; set; } = false;
+
+    public async Task OnBeforeInternalNavigation(LocationChangingContext context)
+    {
+        var formularioFueEditado = editContext.IsModified();
+
+        if(!formularioFueEditado)
+        {
+            return;
+        }
+        if(FormularioPosteadoConExito)
+        {
+            return;
+        }
+
+        var resultado = await swal.FireAsync(new SweetAlertOptions
+        {
+            Title = "Confirmacion",
+            Text = "¿Deseas abandonar la pagina y perder los cambios?",
+            Icon = SweetAlertIcon.Warning,
+            ShowCancelButton = true
+        }); ;
+        //bool confirmado = await JsRuntime.InvokeAsync<bool>("confirm", "Are you sure?");
+        //var confirmado = await JsRuntime.InvokeVoidAsync("¿Deseas abandonar la página y perder los cambios?");
+
+        var confirmado = !string.IsNullOrEmpty(resultado.Value);
+        if (confirmado)
+        {
+            return;
+        }
+
+        context.PreventNavigation();
+    }
+}
+
