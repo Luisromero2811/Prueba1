@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "Oab4C+QH7nWBELkEo+aqdB/ajvBZTXGo2IaGEpf7/JU=",
+  "Hash": "z76wxjW+UIBclC2+aRHa4QttgrdEsddRBfp7nOdu81I=",
   "Source": "Prueba1.Client",
   "BasePath": "/",
   "Mode": "Root",
@@ -763,6 +763,23 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "/usr/local/share/dotnet/packs/Microsoft.NETCore.App.Runtime.Mono.browser-wasm/7.0.2/runtimes/browser-wasm/native/icudt.dat"
+    },
+    {
+      "Identity": "/Users/sistemas/Desktop/Folder LuisRomero/Prueba1/Prueba1/Client/bin/Debug/net7.0/wwwroot/_framework/Markdig.dll",
+      "SourceId": "Prueba1.Client",
+      "SourceType": "Computed",
+      "ContentRoot": "/Users/sistemas/Desktop/Folder LuisRomero/Prueba1/Prueba1/Client/bin/Debug/net7.0/wwwroot/",
+      "BasePath": "/",
+      "RelativePath": "_framework/Markdig.dll",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "BlazorWebAssemblyResource",
+      "AssetTraitValue": "runtime",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "/Users/sistemas/.nuget/packages/markdig/0.30.4/lib/net6.0/Markdig.dll"
     },
     {
       "Identity": "/Users/sistemas/Desktop/Folder LuisRomero/Prueba1/Prueba1/Client/bin/Debug/net7.0/wwwroot/_framework/MathNet.Numerics.dll",
@@ -4673,6 +4690,23 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "/Users/sistemas/Desktop/Folder LuisRomero/Prueba1/Prueba1/Client/bin/Debug/net7.0/wwwroot/_framework/dotnet.wasm"
+    },
+    {
+      "Identity": "/Users/sistemas/Desktop/Folder LuisRomero/Prueba1/Prueba1/Client/obj/Debug/net7.0/build-gz/9mAnGXRY.gz",
+      "SourceId": "Prueba1.Client",
+      "SourceType": "Computed",
+      "ContentRoot": "/Users/sistemas/Desktop/Folder LuisRomero/Prueba1/Prueba1/Client/bin/Debug/net7.0/wwwroot/",
+      "BasePath": "/",
+      "RelativePath": "_framework/Markdig.dll.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "RelatedAsset": "/Users/sistemas/Desktop/Folder LuisRomero/Prueba1/Prueba1/Client/bin/Debug/net7.0/wwwroot/_framework/Markdig.dll",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "/Users/sistemas/Desktop/Folder LuisRomero/Prueba1/Prueba1/Client/bin/Debug/net7.0/wwwroot/_framework/Markdig.dll"
     },
     {
       "Identity": "/Users/sistemas/Desktop/Folder LuisRomero/Prueba1/Prueba1/Client/obj/Debug/net7.0/build-gz/9rtTj6Qh.gz",

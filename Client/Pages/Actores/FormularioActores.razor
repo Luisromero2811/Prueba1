@@ -1,0 +1,62 @@
+﻿<EditForm Model="Actores" OnValidSubmit="OnValidSubmit">
+    <DataAnnotationsValidator />
+    <div class="mb-3">
+        <label>Nombre:</label>
+        <div>
+            <InputText class="form-control" @bind-Value="Actores.Nombre" />
+            <ValidationMessage For="@(() => Actores.Nombre)" />
+        </div>
+    </div>
+    <div class="mb-3">
+        <label>Fecha de Nacimiento:</label>
+        <div>
+            <InputDate class="form-control" @bind-Value="Actores.FechaNacimiento" />
+            <ValidationMessage For="@(() => Actores.FechaNacimiento)" />
+        </div>
+    </div>
+    <div class="mb-3">
+        <InputImg label="Foto" ImagenSeleccionada="ImagenSeleccionada" ImagenURL="@imagenURL" />
+    </div>
+    <!--Apartado de biografia del actor-->
+    <div class="mb-3 form-markdown">
+        <InputMarkDown @bind-Value="@Actores.Biografia"
+                       For=@(() => Actores.Biografia)
+                       Label="Biografia"/>
+    </div>
+    <button class="btn btn-success">Guardar Cambios</button>
+</EditForm>
+
+
+<h3>Formulario de Actores</h3>
+
+@code {
+    string? imagenURL;
+    //Inicializa el componente
+    protected override void OnInitialized()
+    {
+        //Si el actor ya tiene su foto, indicamos que no es necesario estar mandando la foto del actor cada que este sea editado
+        if (!string.IsNullOrEmpty(Actores.Foto))
+        {
+            imagenURL = Actores.Foto;
+            Actores.Foto = null;
+        }
+    }
+    //Mandar la imagen seleccionada al servidor para que el actor sea actualizado
+    private void ImagenSeleccionada(string imagenBase64)
+    {
+        Actores.Foto = imagenBase64;
+        imagenURL = null;
+    }
+
+
+    [Parameter]
+    [EditorRequired]
+    public Actores Actores { get; set; } = null;
+
+    [Parameter]
+    [EditorRequired]
+    public EventCallback OnValidSubmit { get; set; }
+
+
+}
+

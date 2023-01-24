@@ -21,6 +21,19 @@
           "buildMultiTargeting/CurrieTechnologies.Razor.SweetAlert2.props": {}
         }
       },
+      "Markdig/0.30.4": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/Markdig.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Markdig.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "MathNet.Numerics/5.0.0": {
         "type": "package",
         "compile": {
@@ -537,6 +550,19 @@
         },
         "buildMultiTargeting": {
           "buildMultiTargeting/CurrieTechnologies.Razor.SweetAlert2.props": {}
+        }
+      },
+      "Markdig/0.30.4": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/Markdig.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Markdig.dll": {
+            "related": ".xml"
+          }
         }
       },
       "MathNet.Numerics/5.0.0": {
@@ -1085,6 +1111,29 @@
         "staticwebassets/wordpressAdminTheme.js",
         "staticwebassets/wordpressAdminTheme.min.css",
         "staticwebassets/wordpressAdminTheme.min.js"
+      ]
+    },
+    "Markdig/0.30.4": {
+      "sha512": "9LL7Mzubwf6QmOTZIqf+vERiinqPA1H+irBA38POhr93W/it00AvFWaCtF80+8VJTooFmcAJyZT2f60t1f88eQ==",
+      "type": "package",
+      "path": "markdig/0.30.4",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net452/Markdig.dll",
+        "lib/net452/Markdig.xml",
+        "lib/net6.0/Markdig.dll",
+        "lib/net6.0/Markdig.xml",
+        "lib/netcoreapp3.1/Markdig.dll",
+        "lib/netcoreapp3.1/Markdig.xml",
+        "lib/netstandard2.0/Markdig.dll",
+        "lib/netstandard2.0/Markdig.xml",
+        "lib/netstandard2.1/Markdig.dll",
+        "lib/netstandard2.1/Markdig.xml",
+        "markdig.0.30.4.nupkg.sha512",
+        "markdig.nuspec",
+        "markdig.png",
+        "readme.md"
       ]
     },
     "MathNet.Numerics/5.0.0": {
@@ -1962,6 +2011,7 @@
   "projectFileDependencyGroups": {
     "net7.0": [
       "CurrieTechnologies.Razor.SweetAlert2 >= 5.4.0",
+      "Markdig >= 0.30.4",
       "MathNet.Numerics >= 5.0.0",
       "Microsoft.AspNetCore.Components.WebAssembly >= 7.0.1",
       "Microsoft.AspNetCore.Components.WebAssembly.DevServer >= 7.0.1",
@@ -2012,6 +2062,10 @@
           "CurrieTechnologies.Razor.SweetAlert2": {
             "target": "Package",
             "version": "[5.4.0, )"
+          },
+          "Markdig": {
+            "target": "Package",
+            "version": "[0.30.4, )"
           },
           "MathNet.Numerics": {
             "target": "Package",

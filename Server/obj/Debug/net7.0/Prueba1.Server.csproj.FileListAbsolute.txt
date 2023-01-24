@@ -53,3 +53,4 @@
 /Users/sistemas/Desktop/Folder LuisRomero/Prueba1/Prueba1/Server/obj/Debug/net7.0/ref/Prueba1.Server.dll
 /Users/sistemas/Desktop/Folder LuisRomero/Prueba1/Prueba1/Server/bin/Debug/net7.0/MathNet.Numerics.dll
 /Users/sistemas/Desktop/Folder LuisRomero/Prueba1/Prueba1/Server/bin/Debug/net7.0/CurrieTechnologies.Razor.SweetAlert2.dll
+/Users/sistemas/Desktop/Folder LuisRomero/Prueba1/Prueba1/Server/bin/Debug/net7.0/Markdig.dll

@@ -2,12 +2,16 @@
 namespace Prueba1.Shared.Controllers
 {
     public class BlazorPeliculas
-    {
+    { 
+        public int Id { get; set; }
         public string Titulo { get; set; } = null!;
-        public DateTime Fecha_de_lanzamiento { get; set; }
+        public string? Resumen { get; set; }
+        public bool EnCartelera { get; set; }
+        public string? Trailer { get; set; }
+        public DateTime? Fecha_de_lanzamiento { get; set; }
         public int costo_pelicula { get; set; }
-        public string poster { get; set; } = null!;
-        public string TituloCortado
+        public string? poster { get; set; } 
+        public string? TituloCortado
         {
             get
             {

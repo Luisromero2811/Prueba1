@@ -1,10 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "PTKOm4xoUAlgB+1FO/jIDdMenVhPPrdVxKDSSNmzg7D/op2wWVDwaCHte65UujKmw4Df/AVKuU8lukRyORlbBg==",
+  "dgSpecHash": "ZkU0B8fzeRlKQKzHjyvNX9I2euXnEAeD3pHDd/SwRZASMOgSuP3IkMyovfJXXNrmtJiIuCpFp5Wx6eapdMM1TQ==",
   "success": true,
   "projectFilePath": "/Users/sistemas/Desktop/Folder LuisRomero/Prueba1/Prueba1/Server/Prueba1.Server.csproj",
   "expectedPackageFiles": [
     "/Users/sistemas/.nuget/packages/currietechnologies.razor.sweetalert2/5.4.0/currietechnologies.razor.sweetalert2.5.4.0.nupkg.sha512",
+    "/Users/sistemas/.nuget/packages/markdig/0.30.4/markdig.0.30.4.nupkg.sha512",
     "/Users/sistemas/.nuget/packages/mathnet.numerics/5.0.0/mathnet.numerics.5.0.0.nupkg.sha512",
     "/Users/sistemas/.nuget/packages/microsoft.aspnetcore.authorization/7.0.1/microsoft.aspnetcore.authorization.7.0.1.nupkg.sha512",
     "/Users/sistemas/.nuget/packages/microsoft.aspnetcore.components/7.0.1/microsoft.aspnetcore.components.7.0.1.nupkg.sha512",

@@ -1,7 +1,7 @@
 ﻿self.assetsManifest = {
   "assets": [
     {
-      "hash": "sha256-GyXEjqSaxmaLJZ1QWGzwFXIb4pHS6z00KJJ8fyyEEXw=",
+      "hash": "sha256-\/xzAUqlGPPrndNxJDdKIH099uK0UyV\/9D0HnpP3Xjnw=",
       "url": "css\/app.css"
     },
     {
@@ -79,6 +79,10 @@
     {
       "hash": "sha256-13AztQUDDqq2Jd9CwLCnrR+5FL\/vmPwHGSBFTMU+MJM=",
       "url": "_framework\/CurrieTechnologies.Razor.SweetAlert2.dll"
+    },
+    {
+      "hash": "sha256-Yw+GRvxgz3z1q0RtGw3n9XUh1wzzAOQJ7uMJJAJs770=",
+      "url": "_framework\/Markdig.dll"
     },
     {
       "hash": "sha256-g7QaYI5DhAnWUg0BEk9S9XQJ4il5HA4HTjFazn2fQTQ=",
@@ -877,19 +881,19 @@
       "url": "_framework\/icudt_no_CJK.dat"
     },
     {
-      "hash": "sha256-P6qzXbtRlxaQmBtvcL0gSTH78daLNU8O4jS7ffl195E=",
+      "hash": "sha256-XT+7YFr7USxUOhR8yIlKmvOLAnFPutS0wtTJ1UTuPQ0=",
       "url": "_framework\/Prueba1.Shared.dll"
     },
     {
-      "hash": "sha256-p3UUnjDWh3shP7X\/977gD+GUvtfrU\/eWJVOe\/Rsqj1A=",
+      "hash": "sha256-l1Ue66bjBHqAX19\/pqg\/XcUfpwU12Ti4174l5mzTZBg=",
       "url": "_framework\/Prueba1.Shared.pdb"
     },
     {
-      "hash": "sha256-zZhlZ5fkxaAO6KjX5wE9ri5uyM9U6nvVBz20HLRgx0c=",
+      "hash": "sha256-CG2iKMlDpWUuJ2\/OQ+AUsOcr2NgB1\/XwRlFLIgmAnmY=",
       "url": "_framework\/Prueba1.Client.dll"
     },
     {
-      "hash": "sha256-Al8FKIxRGBn258vKkURTYR7JbHT4uBIfSz1qKravw7s=",
+      "hash": "sha256-Ilp3HPasPpKCy\/Iut2y\/+ysQ2JsU7aYI5k97mHrlTcs=",
       "url": "_framework\/Prueba1.Client.pdb"
     },
     {
@@ -897,7 +901,7 @@
       "url": "_framework\/blazor.webassembly.js"
     },
     {
-      "hash": "sha256-pG3FpmCUo87+8fDT5eorjrqqup\/JJ0O2iYv\/QBlmdxg=",
+      "hash": "sha256-9sSY2iOsd5C9c1Dy\/siYM5wDW\/zT5ZyI9NkbiqTig9A=",
       "url": "_framework\/blazor.boot.json"
     },
     {
@@ -1037,5 +1041,5 @@
       "url": "_content\/CurrieTechnologies.Razor.SweetAlert2\/wordpressAdminTheme.min.js"
     }
   ],
-  "version": "vRF0UbTr"
+  "version": "vulsoyyz"
 };

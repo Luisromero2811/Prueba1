@@ -1,0 +1,56 @@
+﻿<div>
+    <label>@label</label>
+    <div>
+        <InputFile OnChange="OnChange" accept=".jpg, .png, .jpeg" />
+    </div>
+</div>
+<div>
+    <!--Si la imagen obtenida del input no es nula, o sea que si esta, esta condicion esta definida para mostrarla-->
+    @if (imagenBase64 is not null)
+    {
+        <div>
+            <div style="margin: 10px;">
+                <img src="data:image/jpeg;base64, @imagenBase64" style="width: 400px;" />
+            </div>
+        </div>
+    }
+     <!--Cuando tenemos la imagen que YA EXISTE, esta se puede volver a editar, por ende la va a mostrar-->
+    @if (ImagenURL is not null)
+    {
+        <div>
+            <div style="margin: 10px;">
+                <img src="@ImagenURL" style="width: 400px;" />
+            </div>
+        </div>
+    }
+</div>
+
+@code {
+    [Parameter] public string label { get; set; } = "Imagen";
+    [Parameter] public string? ImagenURL { get; set; }
+    //Aviso al componente padre que se ha seleccionado una imagen
+    [Parameter] public EventCallback<String> ImagenSeleccionada { get; set; }
+    //A través de estta variable vamos a poder mostrar la imagen al usuario segun sea el caso de funcion asignado
+    private string? imagenBase64;
+    //Función asyncrona para lanzar un evento, en este caso el evento es el click
+    //La función recibe un parametro reservado el cual este cambiara el evento cada que se mande un file
+    async Task OnChange(InputFileChangeEventArgs e)
+    {
+        //Se crea una variable llamada Imagenes el cual recibira multiples archivos, esta variable esta sincronizada al parametro que cambia de evento cada que se manda un file nuevo
+        var Imagenes = e.GetMultipleFiles();
+        //Se itera las imagenes de una por una
+        foreach (var Imagen in Imagenes)
+        {
+            //Toma las dimensiones de las imagenes y cada imagen la manda para mostrarse
+            var arrBytes = new byte[Imagen.Size];
+            await Imagen.OpenReadStream().ReadAsync(arrBytes);
+            //Convierte el archivo a un formato legible de base 64
+            imagenBase64 = Convert.ToBase64String(arrBytes);
+            ImagenURL = null;
+            await ImagenSeleccionada.InvokeAsync(imagenBase64);
+            //Forzamos al componente que tiene cambios
+            StateHasChanged();
+        }
+    }
+    }
+

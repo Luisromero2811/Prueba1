@@ -1,9 +1,23 @@
 ﻿@page "/pelicula/editar/{PeliculaId:int}"
 
-<h3>Component1</h3>
+<h3>Editar Pelicula</h3>
+
+<FormularioPeliculas Pelicula="Pelicula" OnValidSubmit="Editar"></FormularioPeliculas>
 
 @code {
     [Parameter]
     public int PeliculaId { get; set; }
+
+    BlazorPeliculas Pelicula = new BlazorPeliculas();
+
+
+    protected override void OnInitialized()
+    {
+        Pelicula = new BlazorPeliculas { Id = PeliculaId, Titulo = "Mi Pelicula" };
+    }
+    private void Editar ()
+{
+        Console.WriteLine("Editando pelicula");
+}
 }
 

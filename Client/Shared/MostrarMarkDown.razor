@@ -1,0 +1,29 @@
+﻿@using Markdig
+<!--Si la plantilla esta vacia saldra la plantilla de carga, por lo cotnrario, responderá el evento de MarkDown-->
+@if(string.IsNullOrEmpty(ContenidoHTML))
+    {
+        if(PlantillaCarga is not null)
+    {
+            @PlantillaCarga
+        }
+    }
+    else
+{
+    @((MarkupString)ContenidoHTML)
+}
+
+@code {
+    [Parameter] public string? ContenidoMarkDown { get; set; }
+    [Parameter] public RenderFragment PlantillaCarga { get; set; } = null;
+    private string? ContenidoHTML;
+
+    protected override void OnParametersSet()
+    {
+        if(ContenidoMarkDown is not null)
+    {
+            //Si el cotenido del primer textarea no es nulo, entonces lo va a pasar a MarkDown para estilizar una nueva salida de TextArea
+            ContenidoHTML = Markdown.ToHtml(ContenidoMarkDown);
+    }
+    }
+}
+

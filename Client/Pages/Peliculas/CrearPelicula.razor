@@ -1,12 +1,12 @@
 ﻿@page "/peliculas/crear"
 @inject NavigationManager navigationManager
 
+<h3>Crear Pelicula</h3>
+<FormularioPeliculas Pelicula="Pelicula" OnValidSubmit="crear"></FormularioPeliculas>
 
-<button @onclick="crear">
-    Guardar Pelicula
-</button>
 
 @code {
+    private BlazorPeliculas Pelicula = new BlazorPeliculas();
     void crear()
     {
         Console.WriteLine(navigationManager.BaseUri);

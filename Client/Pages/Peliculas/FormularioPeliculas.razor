@@ -1,0 +1,64 @@
+﻿<EditForm Model="Pelicula" OnValidSubmit="OnValidSubmit">
+    <DataAnnotationsValidator />
+
+    <div class="mb-3">
+        <label>Titulo:</label>
+        <div>
+            <InputText class="form-control" @bind-Value="@Pelicula.Titulo"></InputText>
+            <ValidationMessage For="@(() => Pelicula.Titulo)"></ValidationMessage>
+        </div>
+    </div>
+    <div class="mb-3">
+        <label>En Cartelera:</label>
+        <div>
+            <InputCheckbox @bind-Value="@Pelicula.EnCartelera" />
+            <ValidationMessage For="@(() => Pelicula.EnCartelera)"></ValidationMessage>
+        </div>
+    </div>
+    <div class="mb-3">
+        <label>Fecha de Lanzamiento:</label>
+        <div>
+            <InputDate class="form-control" @bind-Value="@Pelicula.Fecha_de_lanzamiento" />
+            <ValidationMessage For="@(() => Pelicula.Fecha_de_lanzamiento)"></ValidationMessage>
+        </div>
+    </div>
+    <div class="mb-3">
+        <InputImg label="Foto" ImagenSeleccionada="ImagenSeleccionada" ImagenURL="@imagenURL" />
+    </div>
+    <div class="mb-3 form-markdown">
+        <InputMarkDown @bind-Value="@Pelicula.Resumen"
+                       For=@(() => Pelicula.Resumen)
+                       Label="Resumen" />
+    </div>
+    <button class="btn btn-success">Guardar Cambios</button>
+</EditForm>
+
+
+
+@code {
+    string? imagenURL;
+    [Parameter]
+    [EditorRequired]
+    public BlazorPeliculas Pelicula { get; set; } = null!;
+
+    [Parameter]
+    [EditorRequired]
+    public EventCallback OnValidSubmit { get; set; }
+    protected override void OnInitialized()
+    {
+        //Si el actor ya tiene su foto, indicamos que no es necesario estar mandando la foto del actor cada que este sea editado
+        if (!string.IsNullOrEmpty(Pelicula.poster))
+        {
+            imagenURL = Pelicula.poster;
+            Pelicula.poster = null;
+        }
+    }
+    //Mandar la imagen seleccionada al servidor para que el actor sea actualizado
+    private void ImagenSeleccionada(string imagenBase64)
+    {
+        Pelicula.poster = imagenBase64;
+        imagenURL = null;
+    }
+
+}
+

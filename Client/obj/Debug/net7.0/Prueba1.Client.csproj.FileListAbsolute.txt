@@ -8,6 +8,7 @@
 /Users/sistemas/Desktop/Folder LuisRomero/Prueba1/Prueba1/Client/bin/Debug/net7.0/wwwroot/_framework/icudt_EFIGS.dat
 /Users/sistemas/Desktop/Folder LuisRomero/Prueba1/Prueba1/Client/bin/Debug/net7.0/wwwroot/_framework/icudt_no_CJK.dat
 /Users/sistemas/Desktop/Folder LuisRomero/Prueba1/Prueba1/Client/bin/Debug/net7.0/wwwroot/_framework/icudt.dat
+/Users/sistemas/Desktop/Folder LuisRomero/Prueba1/Prueba1/Client/bin/Debug/net7.0/wwwroot/_framework/Markdig.dll
 /Users/sistemas/Desktop/Folder LuisRomero/Prueba1/Prueba1/Client/bin/Debug/net7.0/wwwroot/_framework/MathNet.Numerics.dll
 /Users/sistemas/Desktop/Folder LuisRomero/Prueba1/Prueba1/Client/bin/Debug/net7.0/wwwroot/_framework/Microsoft.AspNetCore.Authorization.dll
 /Users/sistemas/Desktop/Folder LuisRomero/Prueba1/Prueba1/Client/bin/Debug/net7.0/wwwroot/_framework/Microsoft.AspNetCore.Components.dll
@@ -238,6 +239,7 @@
 /Users/sistemas/Desktop/Folder LuisRomero/Prueba1/Prueba1/Client/bin/Debug/net7.0/wwwroot/_framework/System.ObjectModel.dll.gz
 /Users/sistemas/Desktop/Folder LuisRomero/Prueba1/Prueba1/Client/bin/Debug/net7.0/wwwroot/_framework/System.Reflection.TypeExtensions.dll.gz
 /Users/sistemas/Desktop/Folder LuisRomero/Prueba1/Prueba1/Client/bin/Debug/net7.0/wwwroot/_framework/dotnet.wasm.gz
+/Users/sistemas/Desktop/Folder LuisRomero/Prueba1/Prueba1/Client/bin/Debug/net7.0/wwwroot/_framework/Markdig.dll.gz
 /Users/sistemas/Desktop/Folder LuisRomero/Prueba1/Prueba1/Client/bin/Debug/net7.0/wwwroot/_framework/System.Xml.dll.gz
 /Users/sistemas/Desktop/Folder LuisRomero/Prueba1/Prueba1/Client/bin/Debug/net7.0/wwwroot/_framework/Prueba1.Client.pdb.gz
 /Users/sistemas/Desktop/Folder LuisRomero/Prueba1/Prueba1/Client/bin/Debug/net7.0/wwwroot/_framework/System.Diagnostics.TraceSource.dll.gz
@@ -415,6 +417,7 @@
 /Users/sistemas/Desktop/Folder LuisRomero/Prueba1/Prueba1/Client/bin/Debug/net7.0/Prueba1.Client.dll
 /Users/sistemas/Desktop/Folder LuisRomero/Prueba1/Prueba1/Client/bin/Debug/net7.0/Prueba1.Client.pdb
 /Users/sistemas/Desktop/Folder LuisRomero/Prueba1/Prueba1/Client/bin/Debug/net7.0/CurrieTechnologies.Razor.SweetAlert2.dll
+/Users/sistemas/Desktop/Folder LuisRomero/Prueba1/Prueba1/Client/bin/Debug/net7.0/Markdig.dll
 /Users/sistemas/Desktop/Folder LuisRomero/Prueba1/Prueba1/Client/bin/Debug/net7.0/MathNet.Numerics.dll
 /Users/sistemas/Desktop/Folder LuisRomero/Prueba1/Prueba1/Client/bin/Debug/net7.0/Microsoft.AspNetCore.Authorization.dll
 /Users/sistemas/Desktop/Folder LuisRomero/Prueba1/Prueba1/Client/bin/Debug/net7.0/Microsoft.AspNetCore.Components.dll
@@ -623,6 +626,7 @@
 /Users/sistemas/Desktop/Folder LuisRomero/Prueba1/Prueba1/Client/obj/Debug/net7.0/Prueba1.Client.csproj.CoreCompileInputs.cache
 /Users/sistemas/Desktop/Folder LuisRomero/Prueba1/Prueba1/Client/obj/Debug/net7.0/Prueba1.Client.MvcApplicationPartsAssemblyInfo.cache
 /Users/sistemas/Desktop/Folder LuisRomero/Prueba1/Prueba1/Client/obj/Debug/net7.0/build-gz/XoWy6oqG.gz
+/Users/sistemas/Desktop/Folder LuisRomero/Prueba1/Prueba1/Client/obj/Debug/net7.0/build-gz/9mAnGXRY.gz
 /Users/sistemas/Desktop/Folder LuisRomero/Prueba1/Prueba1/Client/obj/Debug/net7.0/build-gz/HeUnN3zy.gz
 /Users/sistemas/Desktop/Folder LuisRomero/Prueba1/Prueba1/Client/obj/Debug/net7.0/build-gz/vOWIc0G5.gz
 /Users/sistemas/Desktop/Folder LuisRomero/Prueba1/Prueba1/Client/obj/Debug/net7.0/build-gz/HbxtQk6r.gz
