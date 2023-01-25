@@ -1,7 +1,7 @@
 ﻿self.assetsManifest = {
   "assets": [
     {
-      "hash": "sha256-\/xzAUqlGPPrndNxJDdKIH099uK0UyV\/9D0HnpP3Xjnw=",
+      "hash": "sha256-S7ybjQZwL5382xR7x\/rtX0YNJgcq6fWyFRfXgf4iRlo=",
       "url": "css\/app.css"
     },
     {
@@ -881,19 +881,19 @@
       "url": "_framework\/icudt_no_CJK.dat"
     },
     {
-      "hash": "sha256-XT+7YFr7USxUOhR8yIlKmvOLAnFPutS0wtTJ1UTuPQ0=",
+      "hash": "sha256-eTwUlcmjqA4kyJW93MZ4rCJLH9dh5xsK9lJrpoOimJU=",
       "url": "_framework\/Prueba1.Shared.dll"
     },
     {
-      "hash": "sha256-l1Ue66bjBHqAX19\/pqg\/XcUfpwU12Ti4174l5mzTZBg=",
+      "hash": "sha256-5D4XaDf2IwK2\/Bw2VJLZFZSDX40FFyKNL3rqZXk\/uI4=",
       "url": "_framework\/Prueba1.Shared.pdb"
     },
     {
-      "hash": "sha256-CG2iKMlDpWUuJ2\/OQ+AUsOcr2NgB1\/XwRlFLIgmAnmY=",
+      "hash": "sha256-b9uP5CM9DqS\/tONsL1avm+VrZXsw2jo+zhSfHugajqc=",
       "url": "_framework\/Prueba1.Client.dll"
     },
     {
-      "hash": "sha256-Ilp3HPasPpKCy\/Iut2y\/+ysQ2JsU7aYI5k97mHrlTcs=",
+      "hash": "sha256-fpRDLpHAt24XO5v++lTLDbqqGHQK9DMm3pUa38cE4yo=",
       "url": "_framework\/Prueba1.Client.pdb"
     },
     {
@@ -901,7 +901,7 @@
       "url": "_framework\/blazor.webassembly.js"
     },
     {
-      "hash": "sha256-9sSY2iOsd5C9c1Dy\/siYM5wDW\/zT5ZyI9NkbiqTig9A=",
+      "hash": "sha256-x0ItkbOHSHjdAs+C9OhdXgcmhO3DRv2q8hBG0BPODPQ=",
       "url": "_framework\/blazor.boot.json"
     },
     {
@@ -1041,5 +1041,5 @@
       "url": "_content\/CurrieTechnologies.Razor.SweetAlert2\/wordpressAdminTheme.min.js"
     }
   ],
-  "version": "vulsoyyz"
+  "version": "OX8UTfUq"
 };

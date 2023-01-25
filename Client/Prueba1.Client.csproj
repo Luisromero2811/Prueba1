@@ -21,6 +21,7 @@
 
     <PackageReference Include="CurrieTechnologies.Razor.SweetAlert2" Version="5.4.0" />
     <PackageReference Include="Markdig" Version="0.30.4" />
+    <PackageReference Include="Blazored.Typeahead" Version="4.7.0" />
   </ItemGroup>
 
   <ItemGroup>
@@ -40,6 +41,8 @@
     <None Remove="MathNet.Numerics" />
     <None Remove="CurrieTechnologies.Razor.SweetAlert2" />
     <None Remove="Markdig" />
+    <None Remove="Helpers\" />
+    <None Remove="Blazored.Typeahead" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="UtilidadesGlobales\" />
@@ -48,6 +51,7 @@
     <Folder Include="Pages\Peliculas\" />
     <Folder Include="Pages\Generos\" />
     <Folder Include="Pages\Actores\" />
+    <Folder Include="Helpers\" />
   </ItemGroup>
   <ItemGroup>
     <Content Remove="wwwroot\js\" />

@@ -2,11 +2,27 @@
 @inject NavigationManager navigationManager
 
 <h3>Crear Pelicula</h3>
-<FormularioPeliculas Pelicula="Pelicula" OnValidSubmit="crear"></FormularioPeliculas>
+<FormularioPeliculas Pelicula="Pelicula" OnValidSubmit="crear" GenerosNoSeleccionados="GeneroNoSeleccionados"></FormularioPeliculas>
 
 
 @code {
     private BlazorPeliculas Pelicula = new BlazorPeliculas();
+    private List<Genero> GeneroNoSeleccionados = new List<Genero>();
+
+    protected override void OnInitialized()
+    {
+        GeneroNoSeleccionados = new List<Genero>()
+            {
+                new Genero() {Id = 1, Nombre="Comedia"},
+                new Genero() {Id = 2, Nombre="Sci-Fi"},
+                new Genero() {Id = 3, Nombre="Terror"},
+                new Genero() {Id = 4, Nombre="Suspenso"}
+            };
+
+    }
+
+
+
     void crear()
     {
         Console.WriteLine(navigationManager.BaseUri);

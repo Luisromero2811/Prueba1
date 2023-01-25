@@ -72,6 +72,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvUGVsaWN1bGFzL0ZpbHRyb1BlbGljdWxhcy5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
+[/Users/sistemas/Desktop/Folder LuisRomero/Prueba1/Prueba1/Client/Pages/Peliculas/FormularioPeliculas.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvUGVsaWN1bGFzL0Zvcm11bGFyaW9QZWxpY3VsYXMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
 [/Users/sistemas/Desktop/Folder LuisRomero/Prueba1/Prueba1/Client/Pages/Peliculas/VisualizarPelicula.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvUGVsaWN1bGFzL1Zpc3VhbGl6YXJQZWxpY3VsYS5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
@@ -98,6 +102,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [/Users/sistemas/Desktop/Folder LuisRomero/Prueba1/Prueba1/Client/Shared/PeliculaIndividual.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkL1BlbGljdWxhSW5kaXZpZHVhbC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/sistemas/Desktop/Folder LuisRomero/Prueba1/Prueba1/Client/Shared/SelectorMultiple.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkL1NlbGVjdG9yTXVsdGlwbGUucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
 [/Users/sistemas/Desktop/Folder LuisRomero/Prueba1/Prueba1/Client/Shared/SurveyPrompt.razor]

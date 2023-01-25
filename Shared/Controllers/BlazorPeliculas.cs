@@ -10,7 +10,10 @@ namespace Prueba1.Shared.Controllers
         public string? Trailer { get; set; }
         public DateTime? Fecha_de_lanzamiento { get; set; }
         public int costo_pelicula { get; set; }
-        public string? poster { get; set; } 
+        public string? poster { get; set; }
+        //Creamos una lista de relacion de Generos y Peliculas
+        //Podemos acceder al listado de Generos mediante esta propiedad
+        public List<GeneroPelicula> GenerosPelicula = new List<GeneroPelicula>();
         public string? TituloCortado
         {
             get

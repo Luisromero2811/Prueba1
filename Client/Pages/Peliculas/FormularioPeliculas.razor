@@ -30,6 +30,14 @@
                        For=@(() => Pelicula.Resumen)
                        Label="Resumen" />
     </div>
+
+    <div class="mb-3">
+        <label>Géneros:</label>
+        <div
+             <!---->
+            <SelectorMultiple NoSeleccionados="NoSeleccionados" Seleccionados="Seleccionados"></SelectorMultiple>
+        </div>
+    </div>
     <button class="btn btn-success">Guardar Cambios</button>
 </EditForm>
 
@@ -52,6 +60,9 @@
             imagenURL = Pelicula.poster;
             Pelicula.poster = null;
         }
+        Seleccionados = GenerosSeleccionados.Select(x => new SelectorMultipleModel(x.Id.ToString(), x.Nombre)).ToList();
+        NoSeleccionados = GenerosNoSeleccionados.Select(x => new SelectorMultipleModel(x.Id.ToString(), x.Nombre)).ToList();
+
     }
     //Mandar la imagen seleccionada al servidor para que el actor sea actualizado
     private void ImagenSeleccionada(string imagenBase64)
@@ -60,5 +71,20 @@
         imagenURL = null;
     }
 
+    [Parameter]
+    public List<Genero> GenerosSeleccionados { get; set; } = new List<Genero>();
+
+    [Parameter]
+    [EditorRequired]
+    public List<Genero> GenerosNoSeleccionados { get; set; } = new List<Genero>();
+
+    //Creamos un listado de selector multiple viewmodel para pasarselo al componente de Generos
+    private List<SelectorMultipleModel> Seleccionados { get; set; } = new List<SelectorMultipleModel>();
+    private List<SelectorMultipleModel> NoSeleccionados { get; set; } = new List<SelectorMultipleModel>();
 }
+
+
+
+
+
 
