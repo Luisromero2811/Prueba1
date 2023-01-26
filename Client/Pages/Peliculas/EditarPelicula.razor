@@ -2,7 +2,11 @@
 
 <h3>Editar Pelicula</h3>
 
-<FormularioPeliculas Pelicula="Pelicula" OnValidSubmit="Editar"></FormularioPeliculas>
+<FormularioPeliculas Pelicula="Pelicula" OnValidSubmit="Editar"
+                     GenerosNoSeleccionados="GenerosNoSeleccionados"
+                     ActoresSeleccionados="ActoresSeleccionados"
+                     GenerosSeleccionados="GenerosSeleccionados"
+                     ></FormularioPeliculas>
 
 @code {
     [Parameter]
@@ -10,14 +14,17 @@
 
     BlazorPeliculas Pelicula = new BlazorPeliculas();
 
+    public List<Genero> GenerosNoSeleccionados { get; set; } = new List<Genero>();
+    public List<Actores> ActoresSeleccionados { get; set; } = new List<Actores>();
+    public List<Genero> GenerosSeleccionados { get; set; } = new List<Genero>();
 
     protected override void OnInitialized()
     {
         Pelicula = new BlazorPeliculas { Id = PeliculaId, Titulo = "Mi Pelicula" };
     }
     private void Editar ()
-{
+    {
         Console.WriteLine("Editando pelicula");
-}
+    }
 }
 

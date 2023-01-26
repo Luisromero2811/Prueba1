@@ -1,11 +1,82 @@
 ﻿@using Blazored.Typeahead
 @typeparam t
 
-<BlazoredTypeahead TValue="t" TItem="t" >
-
+<BlazoredTypeahead TValue="t" TItem="t" SearchMethod="SearchMethod"
+                   Value="sampleItem" ValueChanged="ElementoSeleccionado" ValueExpression="@(() => sampleItem)">
+    <!--El elemento ValueExpression sirve para apuntar al valor, en este caso sera al sample item-->
+    <ResultTemplate>
+        @MyResultTemplate(context)
+    </ResultTemplate>
+    <NotFoundTemplate>
+        Lo sentimos, no hay registros
+    </NotFoundTemplate>
+    <SelectedTemplate>
+        <!--SelectedTemplate no se usará solamente es obligación ponerlo por requisito de Typeahead-->
+    </SelectedTemplate>
 </BlazoredTypeahead>
+<!--Lista de elementos-->
+<ul class="list-group">
+    @foreach (var item in ElementosSeleccionados)
+    {
+        //Draggable es elemento arrastable
+        <li draggable="true"
+            @ondragstart="@(() => HandleDragStart(item))"
+            @ondragover="@(() => HandleDragOver(item))"
+            class="list-group-item list-group-item-action">
+            @MyListTemplateItem(item)
+            <span class="badge bg-primary rounded-pill" style="cursor: pointer" @onclick="@(() => ElementosSeleccionados.Remove(item))">
+                X
+            </span>
+        </li>
+    }
+</ul>
 
-@code {
 
+
+@code
+{
+    //Función SearchMethod que recibe parametros string para ejecutar SearchMethod, donde devuelve un IEnumerable el cual será la lista de valores
+    [Parameter, EditorRequired] public Func<string, Task<IEnumerable<t>>> SearchMethod { get; set; } = null;
+    //Valor de asignación, cuando el usuario seleccione un valor este mismo lo vamos a guardar
+    t? sampleItem = default(t);
+    t? itemArrastrado;
+    //Lista de elementos seleccionados
+    [Parameter] public List<t> ElementosSeleccionados { get; set; } = new List<t>();
+    //Valor de cambio, cuando el usuario cambie el valor del TypeAhead, se ejecutará esta funcion
+    private void ElementoSeleccionado(t item)
+    {
+        //Condicion para verificar que en elementos seleccionados no existan los elementos que le pasamos con Item, si existe, ya no hará nada, lógica para comparar los elementos
+        if (!ElementosSeleccionados.Any(x => x.Equals(item)))
+        {
+            ElementosSeleccionados.Add(item);
+        }
+        sampleItem = default(t);
+    }
+    //Parametro de tipo renderFragment el cual con el podemos enviar contenido mediante parametros
+    [Parameter, EditorRequired] public RenderFragment<t> MyResultTemplate { get; set; } = null;
+
+    //Parametro de tipo renderFragment el cual con el podemos enviar la lista de items para mostrar al componente padre mediante parametros
+    [Parameter, EditorRequired] public RenderFragment<t> MyListTemplateItem { get; set; } = null;
+
+    //Funciones para poder arrastrar los elementos
+    private void HandleDragStart(t item)
+    {
+        itemArrastrado = item;
+    }
+    private void HandleDragOver(t item)
+    {
+        if(itemArrastrado is null)
+        {
+            return;
+        }
+        if(!item.Equals (itemArrastrado))
+        {
+            //Funcion para intercambiar los indices, por ende, su orden cambiará
+            var indiceElementoArrastrado = ElementosSeleccionados.IndexOf(itemArrastrado);
+            var indiceElemento = ElementosSeleccionados.IndexOf(item);
+            ElementosSeleccionados[indiceElemento] = itemArrastrado;
+            ElementosSeleccionados[indiceElementoArrastrado] = item;
+        }
+    }
 }
 

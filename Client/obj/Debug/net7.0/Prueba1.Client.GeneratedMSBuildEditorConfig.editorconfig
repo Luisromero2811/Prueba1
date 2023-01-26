@@ -108,6 +108,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkL1NlbGVjdG9yTXVsdGlwbGUucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
+[/Users/sistemas/Desktop/Folder LuisRomero/Prueba1/Prueba1/Client/Shared/SelectorMultipleTypeahead.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkL1NlbGVjdG9yTXVsdGlwbGVUeXBlYWhlYWQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
 [/Users/sistemas/Desktop/Folder LuisRomero/Prueba1/Prueba1/Client/Shared/SurveyPrompt.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkL1N1cnZleVByb21wdC5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 

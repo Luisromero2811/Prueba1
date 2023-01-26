@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "z76wxjW+UIBclC2+aRHa4QttgrdEsddRBfp7nOdu81I=",
+  "Hash": "cMjoHBBUdlSrhfAvjZwpp0eDZWD3wOjUkpW4T1CYZgE=",
   "Source": "Prueba1.Client",
   "BasePath": "/",
   "Mode": "Root",
@@ -16,6 +16,40 @@
     }
   ],
   "Assets": [
+    {
+      "Identity": "/Users/sistemas/.nuget/packages/blazored.typeahead/4.7.0/staticwebassets/blazored-typeahead.css",
+      "SourceId": "Blazored.Typeahead",
+      "SourceType": "Package",
+      "ContentRoot": "/Users/sistemas/.nuget/packages/blazored.typeahead/4.7.0/staticwebassets/",
+      "BasePath": "_content/Blazored.Typeahead",
+      "RelativePath": "blazored-typeahead.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "/Users/sistemas/.nuget/packages/blazored.typeahead/4.7.0/staticwebassets/blazored-typeahead.css"
+    },
+    {
+      "Identity": "/Users/sistemas/.nuget/packages/blazored.typeahead/4.7.0/staticwebassets/blazored-typeahead.js",
+      "SourceId": "Blazored.Typeahead",
+      "SourceType": "Package",
+      "ContentRoot": "/Users/sistemas/.nuget/packages/blazored.typeahead/4.7.0/staticwebassets/",
+      "BasePath": "_content/Blazored.Typeahead",
+      "RelativePath": "blazored-typeahead.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "/Users/sistemas/.nuget/packages/blazored.typeahead/4.7.0/staticwebassets/blazored-typeahead.js"
+    },
     {
       "Identity": "/Users/sistemas/.nuget/packages/currietechnologies.razor.sweetalert2/5.4.0/staticwebassets/bootstrap4Theme.css",
       "SourceId": "CurrieTechnologies.Razor.SweetAlert2",
@@ -627,6 +661,23 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "/Users/sistemas/.nuget/packages/microsoft.aspnetcore.components.webassembly/7.0.1/build/net7.0/blazor.webassembly.js"
+    },
+    {
+      "Identity": "/Users/sistemas/Desktop/Folder LuisRomero/Prueba1/Prueba1/Client/bin/Debug/net7.0/wwwroot/_framework/Blazored.Typeahead.dll",
+      "SourceId": "Prueba1.Client",
+      "SourceType": "Computed",
+      "ContentRoot": "/Users/sistemas/Desktop/Folder LuisRomero/Prueba1/Prueba1/Client/bin/Debug/net7.0/wwwroot/",
+      "BasePath": "/",
+      "RelativePath": "_framework/Blazored.Typeahead.dll",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "BlazorWebAssemblyResource",
+      "AssetTraitValue": "runtime",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "/Users/sistemas/.nuget/packages/blazored.typeahead/4.7.0/lib/net6.0/Blazored.Typeahead.dll"
     },
     {
       "Identity": "/Users/sistemas/Desktop/Folder LuisRomero/Prueba1/Prueba1/Client/bin/Debug/net7.0/wwwroot/_framework/CurrieTechnologies.Razor.SweetAlert2.dll",
@@ -6645,6 +6696,23 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "/Users/sistemas/Desktop/Folder LuisRomero/Prueba1/Prueba1/Client/bin/Debug/net7.0/wwwroot/_framework/System.Net.HttpListener.dll"
+    },
+    {
+      "Identity": "/Users/sistemas/Desktop/Folder LuisRomero/Prueba1/Prueba1/Client/obj/Debug/net7.0/build-gz/sibWjkW+.gz",
+      "SourceId": "Prueba1.Client",
+      "SourceType": "Computed",
+      "ContentRoot": "/Users/sistemas/Desktop/Folder LuisRomero/Prueba1/Prueba1/Client/bin/Debug/net7.0/wwwroot/",
+      "BasePath": "/",
+      "RelativePath": "_framework/Blazored.Typeahead.dll.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "RelatedAsset": "/Users/sistemas/Desktop/Folder LuisRomero/Prueba1/Prueba1/Client/bin/Debug/net7.0/wwwroot/_framework/Blazored.Typeahead.dll",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "/Users/sistemas/Desktop/Folder LuisRomero/Prueba1/Prueba1/Client/bin/Debug/net7.0/wwwroot/_framework/Blazored.Typeahead.dll"
     },
     {
       "Identity": "/Users/sistemas/Desktop/Folder LuisRomero/Prueba1/Prueba1/Client/obj/Debug/net7.0/build-gz/SiViyP2B.gz",

@@ -61,7 +61,7 @@
       "url": "icon-512.png"
     },
     {
-      "hash": "sha256-+y9tPdQz87u+bOMW1fRQaS6w0FASHo637JQMfJqP68k=",
+      "hash": "sha256-zRa56f0\/JSHKhppkvfaOp28weBe3ef2D9YSZvlfUrNw=",
       "url": "index.html"
     },
     {
@@ -75,6 +75,10 @@
     {
       "hash": "sha256-idzDDTbbSNhZmedRjsZ4CAUatzIJTOpI4OskHeHsA7s=",
       "url": "Prueba1.Client.styles.css"
+    },
+    {
+      "hash": "sha256-0cq+AP7JH6JLYVm2dkmhZ4IIP65fMqy\/jFQ5mtrpkJY=",
+      "url": "_framework\/Blazored.Typeahead.dll"
     },
     {
       "hash": "sha256-13AztQUDDqq2Jd9CwLCnrR+5FL\/vmPwHGSBFTMU+MJM=",
@@ -881,19 +885,19 @@
       "url": "_framework\/icudt_no_CJK.dat"
     },
     {
-      "hash": "sha256-eTwUlcmjqA4kyJW93MZ4rCJLH9dh5xsK9lJrpoOimJU=",
+      "hash": "sha256-bdGm2u\/IytMrY1BhPL6qgjfTfSSGVW38WwmPsBDJ6CQ=",
       "url": "_framework\/Prueba1.Shared.dll"
     },
     {
-      "hash": "sha256-5D4XaDf2IwK2\/Bw2VJLZFZSDX40FFyKNL3rqZXk\/uI4=",
+      "hash": "sha256-ttsd3qUTo1N8D6rsUWN\/eqnZ7KxcdMmF3Je3yABEjm8=",
       "url": "_framework\/Prueba1.Shared.pdb"
     },
     {
-      "hash": "sha256-b9uP5CM9DqS\/tONsL1avm+VrZXsw2jo+zhSfHugajqc=",
+      "hash": "sha256-WB8cDTdBDLlAbVLWRBQkhV5lMSndmfTwMGRfPFN\/0v8=",
       "url": "_framework\/Prueba1.Client.dll"
     },
     {
-      "hash": "sha256-fpRDLpHAt24XO5v++lTLDbqqGHQK9DMm3pUa38cE4yo=",
+      "hash": "sha256-Z9\/lZKSk9Y9U4ILVHkkscp2YlS2PXhBxp4DEM8foe3Y=",
       "url": "_framework\/Prueba1.Client.pdb"
     },
     {
@@ -901,7 +905,7 @@
       "url": "_framework\/blazor.webassembly.js"
     },
     {
-      "hash": "sha256-x0ItkbOHSHjdAs+C9OhdXgcmhO3DRv2q8hBG0BPODPQ=",
+      "hash": "sha256-i2uhtmz\/X8ua0OHyCmuej4r2ARH3VOJPNCYKmTzcYvA=",
       "url": "_framework\/blazor.boot.json"
     },
     {
@@ -1039,7 +1043,15 @@
     {
       "hash": "sha256-47DEQpj8HBSa+\/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=",
       "url": "_content\/CurrieTechnologies.Razor.SweetAlert2\/wordpressAdminTheme.min.js"
+    },
+    {
+      "hash": "sha256-J3yBtIuvF38lccTVcUS7ScUgk93ATgKN6kbpbFM9JA0=",
+      "url": "_content\/Blazored.Typeahead\/blazored-typeahead.css"
+    },
+    {
+      "hash": "sha256-ClIzMmBI5Nozgt7KRG3K3u45r2pMtn\/X9Vx2UeudOPU=",
+      "url": "_content\/Blazored.Typeahead\/blazored-typeahead.js"
     }
   ],
-  "version": "OX8UTfUq"
+  "version": "5cBoK6yl"
 };

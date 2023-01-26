@@ -2,12 +2,16 @@
 @inject NavigationManager navigationManager
 
 <h3>Crear Pelicula</h3>
-<FormularioPeliculas Pelicula="Pelicula" OnValidSubmit="crear" GenerosNoSeleccionados="GeneroNoSeleccionados"></FormularioPeliculas>
+<FormularioPeliculas Pelicula="Pelicula" OnValidSubmit="crear" GenerosNoSeleccionados="GeneroNoSeleccionados"
+                     ActoresSeleccionados="ActoresSeleccionados"
+                     ></FormularioPeliculas>
 
 
 @code {
     private BlazorPeliculas Pelicula = new BlazorPeliculas();
     private List<Genero> GeneroNoSeleccionados = new List<Genero>();
+
+    public List<Actores> ActoresSeleccionados = new List<Actores>();
 
     protected override void OnInitialized()
     {

@@ -1,5 +1,12 @@
+/Users/sistemas/Desktop/Folder LuisRomero/Prueba1/Prueba1/Client/obj/Debug/net7.0/Prueba1.Client.csproj.AssemblyReference.cache
+/Users/sistemas/Desktop/Folder LuisRomero/Prueba1/Prueba1/Client/obj/Debug/net7.0/Prueba1.Client.GeneratedMSBuildEditorConfig.editorconfig
+/Users/sistemas/Desktop/Folder LuisRomero/Prueba1/Prueba1/Client/obj/Debug/net7.0/Prueba1.Client.AssemblyInfoInputs.cache
+/Users/sistemas/Desktop/Folder LuisRomero/Prueba1/Prueba1/Client/obj/Debug/net7.0/Prueba1.Client.AssemblyInfo.cs
+/Users/sistemas/Desktop/Folder LuisRomero/Prueba1/Prueba1/Client/obj/Debug/net7.0/Prueba1.Client.csproj.CoreCompileInputs.cache
+/Users/sistemas/Desktop/Folder LuisRomero/Prueba1/Prueba1/Client/obj/Debug/net7.0/Prueba1.Client.MvcApplicationPartsAssemblyInfo.cache
 /Users/sistemas/Desktop/Folder LuisRomero/Prueba1/Prueba1/Client/bin/Debug/net7.0/wwwroot/_framework/blazor.boot.json
 /Users/sistemas/Desktop/Folder LuisRomero/Prueba1/Prueba1/Client/bin/Debug/net7.0/wwwroot/_framework/blazor.webassembly.js
+/Users/sistemas/Desktop/Folder LuisRomero/Prueba1/Prueba1/Client/bin/Debug/net7.0/wwwroot/_framework/Blazored.Typeahead.dll
 /Users/sistemas/Desktop/Folder LuisRomero/Prueba1/Prueba1/Client/bin/Debug/net7.0/wwwroot/_framework/CurrieTechnologies.Razor.SweetAlert2.dll
 /Users/sistemas/Desktop/Folder LuisRomero/Prueba1/Prueba1/Client/bin/Debug/net7.0/wwwroot/_framework/dotnet.7.0.2.v0yugsc0sn.js
 /Users/sistemas/Desktop/Folder LuisRomero/Prueba1/Prueba1/Client/bin/Debug/net7.0/wwwroot/_framework/dotnet.timezones.blat
@@ -354,6 +361,7 @@
 /Users/sistemas/Desktop/Folder LuisRomero/Prueba1/Prueba1/Client/bin/Debug/net7.0/wwwroot/_framework/System.IO.Compression.dll.gz
 /Users/sistemas/Desktop/Folder LuisRomero/Prueba1/Prueba1/Client/bin/Debug/net7.0/wwwroot/_framework/System.IO.IsolatedStorage.dll.gz
 /Users/sistemas/Desktop/Folder LuisRomero/Prueba1/Prueba1/Client/bin/Debug/net7.0/wwwroot/_framework/System.Net.HttpListener.dll.gz
+/Users/sistemas/Desktop/Folder LuisRomero/Prueba1/Prueba1/Client/bin/Debug/net7.0/wwwroot/_framework/Blazored.Typeahead.dll.gz
 /Users/sistemas/Desktop/Folder LuisRomero/Prueba1/Prueba1/Client/bin/Debug/net7.0/wwwroot/_framework/System.ComponentModel.TypeConverter.dll.gz
 /Users/sistemas/Desktop/Folder LuisRomero/Prueba1/Prueba1/Client/bin/Debug/net7.0/wwwroot/_framework/System.ServiceModel.Web.dll.gz
 /Users/sistemas/Desktop/Folder LuisRomero/Prueba1/Prueba1/Client/bin/Debug/net7.0/wwwroot/_framework/Microsoft.AspNetCore.Metadata.dll.gz
@@ -416,6 +424,7 @@
 /Users/sistemas/Desktop/Folder LuisRomero/Prueba1/Prueba1/Client/bin/Debug/net7.0/Prueba1.Client.staticwebassets.runtime.json
 /Users/sistemas/Desktop/Folder LuisRomero/Prueba1/Prueba1/Client/bin/Debug/net7.0/Prueba1.Client.dll
 /Users/sistemas/Desktop/Folder LuisRomero/Prueba1/Prueba1/Client/bin/Debug/net7.0/Prueba1.Client.pdb
+/Users/sistemas/Desktop/Folder LuisRomero/Prueba1/Prueba1/Client/bin/Debug/net7.0/Blazored.Typeahead.dll
 /Users/sistemas/Desktop/Folder LuisRomero/Prueba1/Prueba1/Client/bin/Debug/net7.0/CurrieTechnologies.Razor.SweetAlert2.dll
 /Users/sistemas/Desktop/Folder LuisRomero/Prueba1/Prueba1/Client/bin/Debug/net7.0/Markdig.dll
 /Users/sistemas/Desktop/Folder LuisRomero/Prueba1/Prueba1/Client/bin/Debug/net7.0/MathNet.Numerics.dll
@@ -619,12 +628,7 @@
 /Users/sistemas/Desktop/Folder LuisRomero/Prueba1/Prueba1/Client/bin/Debug/net7.0/icudt_no_CJK.dat
 /Users/sistemas/Desktop/Folder LuisRomero/Prueba1/Prueba1/Client/bin/Debug/net7.0/Prueba1.Shared.dll
 /Users/sistemas/Desktop/Folder LuisRomero/Prueba1/Prueba1/Client/bin/Debug/net7.0/Prueba1.Shared.pdb
-/Users/sistemas/Desktop/Folder LuisRomero/Prueba1/Prueba1/Client/obj/Debug/net7.0/Prueba1.Client.csproj.AssemblyReference.cache
-/Users/sistemas/Desktop/Folder LuisRomero/Prueba1/Prueba1/Client/obj/Debug/net7.0/Prueba1.Client.GeneratedMSBuildEditorConfig.editorconfig
-/Users/sistemas/Desktop/Folder LuisRomero/Prueba1/Prueba1/Client/obj/Debug/net7.0/Prueba1.Client.AssemblyInfoInputs.cache
-/Users/sistemas/Desktop/Folder LuisRomero/Prueba1/Prueba1/Client/obj/Debug/net7.0/Prueba1.Client.AssemblyInfo.cs
-/Users/sistemas/Desktop/Folder LuisRomero/Prueba1/Prueba1/Client/obj/Debug/net7.0/Prueba1.Client.csproj.CoreCompileInputs.cache
-/Users/sistemas/Desktop/Folder LuisRomero/Prueba1/Prueba1/Client/obj/Debug/net7.0/Prueba1.Client.MvcApplicationPartsAssemblyInfo.cache
+/Users/sistemas/Desktop/Folder LuisRomero/Prueba1/Prueba1/Client/obj/Debug/net7.0/build-gz/sibWjkW+.gz
 /Users/sistemas/Desktop/Folder LuisRomero/Prueba1/Prueba1/Client/obj/Debug/net7.0/build-gz/XoWy6oqG.gz
 /Users/sistemas/Desktop/Folder LuisRomero/Prueba1/Prueba1/Client/obj/Debug/net7.0/build-gz/9mAnGXRY.gz
 /Users/sistemas/Desktop/Folder LuisRomero/Prueba1/Prueba1/Client/obj/Debug/net7.0/build-gz/HeUnN3zy.gz
