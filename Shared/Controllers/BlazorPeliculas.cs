@@ -13,7 +13,9 @@ namespace Prueba1.Shared.Controllers
         public string? poster { get; set; }
         //Creamos una lista de relacion de Generos y Peliculas
         //Podemos acceder al listado de Generos mediante esta propiedad
-        public List<GeneroPelicula> GenerosPelicula = new List<GeneroPelicula>();
+        public List<GeneroPelicula> GenerosPelicula { get; set; } = new List<GeneroPelicula>();
+        //Podemos acceder al listado de Actores mediante esta propiedad
+        public List<PeliculaActor> PeliculasActor { get; set; } = new List<PeliculaActor>();
         public string? TituloCortado
         {
             get

@@ -1,5 +1,8 @@
 ﻿@page "/generos/crear"
 @inject NavigationManager navigationManager
+@inject IRepositorio repositorio
+@inject SweetAlertService swal
+
 <h3>Crear generos</h3>
 
 <FormularioGenero @ref="formulariogenero" Genero="Genero" OnValidSubmit="crear"></FormularioGenero>
@@ -9,14 +12,23 @@
 
     private FormularioGenero? formulariogenero;
 
-
-    void crear()
+    async Task crear()
     {
-        formulariogenero!.FormularioPosteadoConExito = true;
-        Console.WriteLine("Ejecutando método crear");
-        Console.WriteLine($"Nombre del género: {Genero.Nombre}");
+        //A traves de esta variable hacemos la conexion al controller y asi poder hacer la peticion
+        var httpResponse = await repositorio.Post("api/generos", Genero);
 
-        navigationManager.NavigateTo("generos");
+        if (httpResponse.Error)
+        {
+            var mensajeError = await httpResponse.ObtenerMensajeError();
+            await swal.FireAsync("Error", mensajeError, SweetAlertIcon.Error);
+        }
+        else
+        {
+
+            formulariogenero!.FormularioPosteadoConExito = true;
+            navigationManager.NavigateTo("generos");
+        }
+
     }
 }
 

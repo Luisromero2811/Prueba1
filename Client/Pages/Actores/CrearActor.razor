@@ -1,5 +1,7 @@
 ﻿@page "/actores/crear"
-
+@inject NavigationManager navigationManager
+@inject IRepositorio repositorio
+@inject SweetAlertService swal
 
 
 <FormularioActores OnValidSubmit="Crear" Actores="Actor"></FormularioActores>
@@ -7,9 +9,20 @@
 @code {
     private Actores Actor = new Actores();
 
-    void Crear()
-{
-        Console.WriteLine("Crear Actor");
-}
+    async Task Crear()
+    {
+        //A traves de esta variable hacemos la conexion al controller y asi poder hacer la peticion
+        var httpResponse = await repositorio.Post("api/actores", Actor);
+
+        if (httpResponse.Error)
+        {
+            var mensajeError = await httpResponse.ObtenerMensajeError();
+            await swal.FireAsync("Error", mensajeError, SweetAlertIcon.Error);
+        }
+        else
+        {
+            navigationManager.NavigateTo("actores");
+        }
+    }
 }
 

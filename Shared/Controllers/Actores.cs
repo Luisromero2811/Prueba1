@@ -1,5 +1,6 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Prueba1.Shared.Controllers
 {
@@ -10,6 +11,8 @@ namespace Prueba1.Shared.Controllers
 		public string Nombre { get; set; } = null!;
 		public string? Biografia { get; set; }
 		public string? Foto { get; set; }
+		[NotMapped]
+		public string? Personaje { get; set; }
 		public DateTime? FechaNacimiento { get; set; }
 
 		//Méthod para comparar a los actores 
@@ -30,6 +33,8 @@ namespace Prueba1.Shared.Controllers
         {
             return base.GetHashCode();
         }
+        //Podemos acceder al listado de Actores mediante esta propiedad
+        public List<PeliculaActor> PeliculasActor { get; set; } = new List<PeliculaActor>();
     }
 }
 

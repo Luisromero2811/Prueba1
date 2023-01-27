@@ -7,6 +7,9 @@ namespace Prueba1.Shared.Controllers
 		//Modelamos que genero y pelicula se puede relacionar
 		public int PeliculaId { get; set; }
 		public int GeneroId { get; set; }
+		//Propiedades de navegacion, conocidas como llave foranea
+		public Genero? Genero { get; set; }
+		public BlazorPeliculas? Peliculas { get; set; }
 	}
 }
 

@@ -1,10 +1,11 @@
 ﻿@page "/peliculas/crear"
 @inject NavigationManager navigationManager
+@inject IRepositorio repositorio
+@inject SweetAlertService swal
 
 <h3>Crear Pelicula</h3>
 <FormularioPeliculas Pelicula="Pelicula" OnValidSubmit="crear" GenerosNoSeleccionados="GeneroNoSeleccionados"
-                     ActoresSeleccionados="ActoresSeleccionados"
-                     ></FormularioPeliculas>
+                     ActoresSeleccionados="ActoresSeleccionados"></FormularioPeliculas>
 
 
 @code {
@@ -16,7 +17,7 @@
     protected override void OnInitialized()
     {
         GeneroNoSeleccionados = new List<Genero>()
-            {
+        {
                 new Genero() {Id = 1, Nombre="Comedia"},
                 new Genero() {Id = 2, Nombre="Sci-Fi"},
                 new Genero() {Id = 3, Nombre="Terror"},
@@ -27,10 +28,21 @@
 
 
 
-    void crear()
+    async void crear()
     {
-        Console.WriteLine(navigationManager.BaseUri);
-        navigationManager.NavigateTo("pelicula");
+        //Variable para acceder al controller y realizar su peticion
+        var httpResponse = await repositorio.Post<BlazorPeliculas, int>("api/peliculas", Pelicula);
+
+        if (httpResponse.Error)
+        {
+            var mensajeError = await httpResponse.ObtenerMensajeError();
+            await swal.FireAsync("Error", mensajeError, SweetAlertIcon.Error);
+        }
+        else
+        {
+            var peliculaId = httpResponse.Response; 
+            navigationManager.NavigateTo($"/pelicula/{peliculaId}/{Pelicula.Titulo.Replace(" ", "-")}");
+        }
     }
 }
 

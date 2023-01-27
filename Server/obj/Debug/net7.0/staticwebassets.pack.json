@@ -1,0 +1,25 @@
+{
+  "Files": [
+    {
+      "Id": "/Users/sistemas/Desktop/Folder LuisRomero/Prueba1/Prueba1/Server/wwwroot/personas/6fadbc95-3334-499f-9dcd-93d56cc0a352.jpeg",
+      "PackagePath": "staticwebassets/personas/6fadbc95-3334-499f-9dcd-93d56cc0a352.jpeg"
+    },
+    {
+      "Id": "obj/Debug/net7.0/staticwebassets/msbuild.Prueba1.Server.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj/Debug/net7.0/staticwebassets/msbuild.build.Prueba1.Server.props",
+      "PackagePath": "build\\Prueba1.Server.props"
+    },
+    {
+      "Id": "obj/Debug/net7.0/staticwebassets/msbuild.buildMultiTargeting.Prueba1.Server.props",
+      "PackagePath": "buildMultiTargeting\\Prueba1.Server.props"
+    },
+    {
+      "Id": "obj/Debug/net7.0/staticwebassets/msbuild.buildTransitive.Prueba1.Server.props",
+      "PackagePath": "buildTransitive\\Prueba1.Server.props"
+    }
+  ],
+  "ElementsToRemove": []
+}
