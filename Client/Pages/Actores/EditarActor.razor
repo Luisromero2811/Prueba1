@@ -1,27 +1,63 @@
 ﻿@page "/actores/editar/{ActorId:int}"
+@inject NavigationManager navigationManager
+@inject IRepositorio repositorio
+@inject SweetAlertService swal
+@using Microsoft.AspNetCore.Authorization;
+@attribute [Authorize(Roles = "admin")]
 
 <h3>Editar Actores</h3>
+<!--Condicion para no mostrar el componente hasta que genero quede nulo -->
+@if (Actor is null)
+{
+    <p>Cargando...</p>
+}
+else
+{
+    <FormularioActores Actores="Actor" OnValidSubmit="Editar"></FormularioActores>
+}
 
-<FormularioActores Actores="Actor" OnValidSubmit="Editar"></FormularioActores>
 @code {
     [Parameter]
     public int ActorId { get; set; }
 
-    Actores Actor = new Actores();
+    Actores? Actor;
 
-    protected override void OnInitialized()
+    protected override async Task OnInitializedAsync()
     {
-        Actor = new Actores
+        var respuestaHTTP = await repositorio.Get<Actores>($"api/actores/{ActorId}");
+        //Si la respuesta de la peticion viene con error
+        if (respuestaHTTP.Error)
         {
-            Id = ActorId,
-            Nombre = "Luis Romero",
-            FechaNacimiento = DateTime.Today
-        };
+            //Se el status es NotFound, en automatico va a redirigir a Generos
+            if (respuestaHTTP.HttpResponseMessage.StatusCode == System.Net.HttpStatusCode.NotFound)
+            {
+                navigationManager.NavigateTo("actores");
+            }//Sino, mandara una alerta
+            else
+            {
+                var mensajeError = await respuestaHTTP.ObtenerMensajeError();
+                await swal.FireAsync("Error", mensajeError, SweetAlertIcon.Error);
+            }
+        }
+        else
+        {
+            Actor = respuestaHTTP.Response;
+        }
     }
 
-    void Editar()
-{
-        Console.WriteLine("Editando al Actor");
-}
+    private async Task Editar()
+    {
+        var respuestaHTTP = await repositorio.Put("api/actores", Actor);
+        if (respuestaHTTP.Error)
+        {
+            var mensajeError = await respuestaHTTP.ObtenerMensajeError();
+            await swal.FireAsync("Error", mensajeError, SweetAlertIcon.Error);
+        }
+        else
+        {
+            navigationManager.NavigateTo("actores");
+        }
+
+    }
 }
 

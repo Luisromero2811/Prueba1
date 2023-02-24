@@ -1,21 +1,43 @@
 ﻿@page "/"
 @inject IRepositorio repositorio
 
-    <ListadoPeliculas Peliculas="Peliculas">
+<AuthorizeView>
+    <Authorized>
+        <p>Estas Authenticado, @context.User.Identity?.Name</p>
+    </Authorized>
+    <NotAuthorized>
+        <p>No estas autorizado</p>
+    </NotAuthorized>
+</AuthorizeView>
+
+<div>
+    <h3>Peliculas En Estrenos</h3>
+    <ListadoPeliculas Peliculas="ProximosEstrenos">
     </ListadoPeliculas>
+</div>
+<div>
+    <h3>Peliculas En Cartelera</h3>
+    <ListadoPeliculas Peliculas="PeliculasEnCartelera">
+    </ListadoPeliculas>
+</div>
+
+
 
 
 @code
 {
-  
+
     //Propiedad o variable donde se guarda lo ligado al method obtenerPeliculas
     //List<BlazorPeliculas>? Peliculas { get; set; }
-    public List<BlazorPeliculas>? Peliculas { get; set; }
-    
-    protected override void OnInitialized()
+    public List<BlazorPeliculas>? PeliculasEnCartelera { get; set; }
+    public List<BlazorPeliculas>? ProximosEstrenos { get; set; }
+
+    protected override async Task OnInitializedAsync()
     {
-        Peliculas = repositorio.obtenerPeliculas();
-        
+        var respuestaHTTP = await repositorio.Get<HomePageDTO>("api/peliculas");
+        PeliculasEnCartelera = respuestaHTTP.Response.PeliculasEnCartelera;
+        ProximosEstrenos = respuestaHTTP.Response.ProximosEstrenos;
+
     }
 
 }

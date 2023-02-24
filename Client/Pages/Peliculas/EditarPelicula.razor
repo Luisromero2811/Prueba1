@@ -1,30 +1,78 @@
-﻿@page "/pelicula/editar/{PeliculaId:int}"
+﻿@page "/peliculas/editar/{PeliculaId:int}"
+@inject IRepositorio repositorio
+@inject SweetAlertService swal
+@inject NavigationManager navigationManager
+@using Microsoft.AspNetCore.Authorization;
+@attribute [Authorize(Roles = "admin")]
 
 <h3>Editar Pelicula</h3>
+@if (Pelicula is null)
+{
 
-<FormularioPeliculas Pelicula="Pelicula" OnValidSubmit="Editar"
-                     GenerosNoSeleccionados="GenerosNoSeleccionados"
-                     ActoresSeleccionados="ActoresSeleccionados"
-                     GenerosSeleccionados="GenerosSeleccionados"
-                     ></FormularioPeliculas>
+
+    <p>Cargando...</p>
+}
+else
+{
+    <FormularioPeliculas Pelicula="Pelicula" OnValidSubmit="Editar"
+                         GenerosNoSeleccionados="GenerosNoSeleccionados"
+                         ActoresSeleccionados="ActoresSeleccionados"
+                         GenerosSeleccionados="GenerosSeleccionados"></FormularioPeliculas>
+}
+
+
+
 
 @code {
     [Parameter]
     public int PeliculaId { get; set; }
 
-    BlazorPeliculas Pelicula = new BlazorPeliculas();
+    BlazorPeliculas? Pelicula;
 
     public List<Genero> GenerosNoSeleccionados { get; set; } = new List<Genero>();
     public List<Actores> ActoresSeleccionados { get; set; } = new List<Actores>();
     public List<Genero> GenerosSeleccionados { get; set; } = new List<Genero>();
 
-    protected override void OnInitialized()
+    protected override async Task OnInitializedAsync()
     {
-        Pelicula = new BlazorPeliculas { Id = PeliculaId, Titulo = "Mi Pelicula" };
+        var httpResponse = await repositorio.Get<PeliculaActualizacionDTO>($"api/peliculas/actualizar/{PeliculaId}");
+
+        if (httpResponse.Error)
+        {
+            if (httpResponse.HttpResponseMessage.StatusCode == System.Net.HttpStatusCode.NotFound)
+            {
+
+                navigationManager.NavigateTo("/");
+            }
+            else
+            {
+                var mensajeError = await httpResponse.ObtenerMensajeError();
+                await swal.FireAsync("Error", mensajeError, SweetAlertIcon.Error);
+            }
+        }
+        else
+        {
+            var modelo = httpResponse.Response;
+            ActoresSeleccionados = modelo.Actor;
+            GenerosNoSeleccionados = modelo.GeneroNoSeleccionado;
+            GenerosSeleccionados = modelo.GenerosSeleccionados;
+            Pelicula = modelo.Pelicula;
+
+        }
+
     }
-    private void Editar ()
+    private async Task Editar()
     {
-        Console.WriteLine("Editando pelicula");
+        var respuestaHTTP = await repositorio.Put("api/peliculas", Pelicula);
+        if (respuestaHTTP.Error)
+        {
+            var mensajeError = await respuestaHTTP.ObtenerMensajeError();
+            await swal.FireAsync("Error", mensajeError, SweetAlertIcon.Error);
+        }
+        else
+        {
+            navigationManager.NavigateTo($"pelicula/{PeliculaId}");
+        }
     }
 }
 

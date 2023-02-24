@@ -9,9 +9,11 @@
 <button class="btn btn-primary" @onclick="IncrementCount">Click me</button>
 
 @code {
-   
+
     private int currentCount = 0;
     [Inject] public IJSRuntime js { get; set; }
+    [CascadingParameter] private Task<AuthenticationState> authenticationStateTask { get; set; } = null!;
+
 
     private async Task IncrementCount()
     {
@@ -19,8 +21,18 @@
         var max = arreglo.Maximum();
         var min = arreglo.Minimum();
 
-        await js.InvokeVoidAsync("alert", $"El max es: {max} y el min es: {min}");
-        currentCount++;
+        //await js.InvokeVoidAsync("alert", $"El max es: {max} y el min es: {min}");
+        var authenticationState = await authenticationStateTask;
+        var usuarioEstaAutenticado = authenticationState.User.Identity!.IsAuthenticated;
+        if (usuarioEstaAutenticado)
+        {
+            currentCount++;
+        }
+        else
+        {
+            currentCount -=1;
+        }
+
 
     }
 }

@@ -21,6 +21,26 @@
       "PackagePath": "staticwebassets/service-worker.js"
     },
     {
+      "Id": "/Users/sistemas/Desktop/Folder LuisRomero/Prueba1/Prueba1/Client/wwwroot/.DS_Store",
+      "PackagePath": "staticwebassets/.DS_Store"
+    },
+    {
+      "Id": "/Users/sistemas/Desktop/Folder LuisRomero/Prueba1/Prueba1/Client/wwwroot/Images/.DS_Store",
+      "PackagePath": "staticwebassets/Images/.DS_Store"
+    },
+    {
+      "Id": "/Users/sistemas/Desktop/Folder LuisRomero/Prueba1/Prueba1/Client/wwwroot/Images/DuaDua.jpg",
+      "PackagePath": "staticwebassets/Images/DuaDua.jpg"
+    },
+    {
+      "Id": "/Users/sistemas/Desktop/Folder LuisRomero/Prueba1/Prueba1/Client/wwwroot/Images/DuaLipa.jpg",
+      "PackagePath": "staticwebassets/Images/DuaLipa.jpg"
+    },
+    {
+      "Id": "/Users/sistemas/Desktop/Folder LuisRomero/Prueba1/Prueba1/Client/wwwroot/Images/DuaLips.jpg",
+      "PackagePath": "staticwebassets/Images/DuaLips.jpg"
+    },
+    {
       "Id": "/Users/sistemas/Desktop/Folder LuisRomero/Prueba1/Prueba1/Client/wwwroot/css/app.css",
       "PackagePath": "staticwebassets/css/app.css"
     },

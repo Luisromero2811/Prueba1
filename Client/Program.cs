@@ -3,12 +3,14 @@ using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
 using Prueba1.Client;
 using Prueba1.Client.Repositorios;
 using CurrieTechnologies.Razor.SweetAlert2;
+using Prueba1.Client.Auth;
+using Microsoft.AspNetCore.Components.Authorization;
 
 var builder = WebAssemblyHostBuilder.CreateDefault(args);
 builder.RootComponents.Add<App>("#app");
 builder.RootComponents.Add<HeadOutlet>("head::after");
 
-builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) });
+builder.Services.AddSingleton(sp => new HttpClient { BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) });
 ConfigureServices(builder.Services);
 
 
@@ -18,5 +20,13 @@ void ConfigureServices(IServiceCollection services)
 {
     services.AddSweetAlert2();
     services.AddScoped<IRepositorio, Repositorio>();
-    
+    services.AddAuthorizationCore();
+
+    services.AddScoped<ProveedorAutenticacionJWT>();
+    services.AddScoped<AuthenticationStateProvider, ProveedorAutenticacionJWT>(
+        proveedor => proveedor.GetRequiredService<ProveedorAutenticacionJWT>());
+
+    services.AddScoped<ILoginService, ProveedorAutenticacionJWT>(proveedor =>
+        proveedor.GetRequiredService<ProveedorAutenticacionJWT>());
+    services.AddScoped<RenovadorToken>();
 }

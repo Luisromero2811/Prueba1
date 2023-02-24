@@ -1,10 +1,11 @@
 ﻿using System;
 using Microsoft.EntityFrameworkCore;
 using Prueba1.Shared.Controllers;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 
 namespace Prueba1.Server
 {
-	public class ApplicationDbContext : DbContext 
+	public class ApplicationDbContext : IdentityDbContext 
 	{
         //Para esta clase general se usará explicitamente para guardar el ambiente o entorno, algo parecido al .env de Laravel
         //Con DbContextOptions se pasarán las configuraciones iniciales, ejemplo la conexión a nuestra BD
@@ -19,8 +20,8 @@ namespace Prueba1.Server
 
             //Configurar la entidad con modelbuilder.Entity
             //A través de esta entidad podemos aplicar la llave compartida para generar el campo primario de la relacion muchos a muchos
-            modelBuilder.Entity<GeneroPelicula>().HasKey(x => new { x.GeneroId, x.PeliculaId });
-            modelBuilder.Entity<PeliculaActor>().HasKey(x => new { x.PeliculaId, x.ActorId });
+            modelBuilder.Entity<GeneroPelicula>().HasKey(x => new { x.GeneroId, x.PeliculasId });
+            modelBuilder.Entity<PeliculaActor>().HasKey(x => new { x.PeliculasId, x.ActorId });
         }
 
         public DbSet<Genero> Generos => Set<Genero>();
@@ -28,6 +29,7 @@ namespace Prueba1.Server
         public DbSet<BlazorPeliculas> Peliculas => Set<BlazorPeliculas>();
         public DbSet<GeneroPelicula> GenerosPeliculas => Set<GeneroPelicula>();
         public DbSet<PeliculaActor> PeliculasActores => Set<PeliculaActor>();
+        public DbSet<VotoPelicula> VotosPeliculas => Set<VotoPelicula>();
 
     }
 }

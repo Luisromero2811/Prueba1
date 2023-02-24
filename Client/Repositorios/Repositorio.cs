@@ -15,7 +15,7 @@ namespace Prueba1.Client.Repositorios
         }
         private JsonSerializerOptions OpcionesPorDefectoJSON => new JsonSerializerOptions
         {
-            PropertyNameCaseInsensitive = true 
+            PropertyNameCaseInsensitive = true
         };
         //Estamos encapsulando al objeto para despues poderlo enviar, recibiendo un string url y darle la func con T 
         public async Task<HttpResponseWrapper<object>> Post<T>(string url, T enviar)
@@ -26,6 +26,18 @@ namespace Prueba1.Client.Repositorios
             var enviarContent = new StringContent(enviarJSON, Encoding.UTF8, "application/json");
             //Enviamos la peticion por method post 
             var responseHttp = await httpClient.PostAsync(url, enviarContent);
+            //Encapsulamos la respuesta de la peticion 
+            return new HttpResponseWrapper<object>(null, !responseHttp.IsSuccessStatusCode, responseHttp);
+        }
+
+        public async Task<HttpResponseWrapper<object>> Put<T>(string url, T enviar)
+        {
+            //Vamos a serializar el objeto que vamos a enviar
+            var enviarJSON = JsonSerializer.Serialize(enviar);
+            //Con esta variable estamos enviando la informacion 
+            var enviarContent = new StringContent(enviarJSON, Encoding.UTF8, "application/json");
+            //Enviamos la peticion por method post 
+            var responseHttp = await httpClient.PutAsync(url, enviarContent);
             //Encapsulamos la respuesta de la peticion 
             return new HttpResponseWrapper<object>(null, !responseHttp.IsSuccessStatusCode, responseHttp);
         }
@@ -57,6 +69,30 @@ namespace Prueba1.Client.Repositorios
             var respuestaString = await httpResponse.Content.ReadAsStringAsync();
             return JsonSerializer.Deserialize<T>(respuestaString, jsonSerializerOptions);
         }
+        //Method delete
+        public async Task<HttpResponseWrapper<object>> Delete(string url)
+        {
+            var responseHTTP = await httpClient.DeleteAsync(url);
+            return new HttpResponseWrapper<object>(null, !responseHTTP.IsSuccessStatusCode, responseHTTP);
+        }
+
+        //Method para obtencion de datos Get
+        public async Task<HttpResponseWrapper<T>> Get<T>(string url)
+        {
+            //Variable de tipo HTTP la cual podemos obtener la data
+            var respuestaHTTP = await httpClient.GetAsync(url);
+            //Condicion para cuando exista una respuesta exitosa, podemos deserializar la respuesta y despues retornarla 
+            if(respuestaHTTP.IsSuccessStatusCode)
+            {
+                var respuesta = await DeserializarRespuesta<T>(respuestaHTTP, OpcionesPorDefectoJSON);
+                return new HttpResponseWrapper<T>(respuesta, Error: false, respuestaHTTP);
+            }//Sino, se trae activada la respuesta de error por defecto
+            else
+            {
+                return new HttpResponseWrapper<T>(default, Error: true, respuestaHTTP);
+            }
+        }
+
 
         public List<BlazorPeliculas> obtenerPeliculas()
         {
@@ -70,6 +106,7 @@ namespace Prueba1.Client.Repositorios
             poster="https://upload.wikimedia.org/wikipedia/en/a/aa/Bloodinbloodout_poster.jpg",Fecha_de_lanzamiento = new DateTime(2020,11,27)},
         };
         }
+
     }
 }
 

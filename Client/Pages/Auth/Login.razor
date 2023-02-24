@@ -1,0 +1,50 @@
+﻿@page "/Login"
+@using Prueba1.Client.Auth;
+@inject IRepositorio repositorio
+@inject NavigationManager navigationManager
+@inject SweetAlertService swal
+@inject ILoginService loginService
+<EditForm Model="userInfo" OnValidSubmit="LoguearUsuario">
+    <DataAnnotationsValidator />
+    <div class="mb-3">
+        <label>Email:</label>
+        <div>
+            <InputText class="form-control" @bind-Value="userInfo.Email"></InputText>
+            <ValidationMessage For="@(() => userInfo.Email)"></ValidationMessage>
+        </div>
+    </div>
+    <div class="mb-3">
+        <label>Password:</label>
+        <div>
+            <InputText type="password" class="form-control" @bind-Value="userInfo.Password"></InputText>
+            <ValidationMessage For="@(() => userInfo.Password)"></ValidationMessage>
+        </div>
+    </div>
+    <button type="submit" class="btn btn-primary">Login</button>
+</EditForm>
+
+
+@code {
+    //UserInfo es el parametro del method de controlador CreateUser
+    private UserInfo userInfo = new UserInfo();
+    //aA1234!
+    private async Task LoguearUsuario()
+    {
+        //Mandamos un userinfo(usuario construido y retornamos un Token)
+        var respuestaHTTP = await repositorio.Post<UserInfo, UserTokenDTO>("api/cuentas/login", userInfo);
+
+        if (respuestaHTTP.Error)
+        {
+            var mensajeError = await respuestaHTTP.ObtenerMensajeError();
+            await swal.FireAsync("Error", mensajeError, SweetAlertIcon.Error);
+        }
+        else
+        {
+            await loginService.Login(respuestaHTTP.Response!);
+            navigationManager.NavigateTo("");
+        }
+    }
+
+}
+
+

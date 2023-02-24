@@ -1,8 +1,152 @@
 {
   "Files": [
     {
+      "Id": "/Users/sistemas/Desktop/Folder LuisRomero/Prueba1/Prueba1/Server/wwwroot/personas/00c2df7f-6351-4976-9386-3ac4523bb26c.jpeg",
+      "PackagePath": "staticwebassets/personas/00c2df7f-6351-4976-9386-3ac4523bb26c.jpeg"
+    },
+    {
+      "Id": "/Users/sistemas/Desktop/Folder LuisRomero/Prueba1/Prueba1/Server/wwwroot/personas/0f9a7c9e-c797-48c7-a18c-d93752adbd0e.jpeg",
+      "PackagePath": "staticwebassets/personas/0f9a7c9e-c797-48c7-a18c-d93752adbd0e.jpeg"
+    },
+    {
+      "Id": "/Users/sistemas/Desktop/Folder LuisRomero/Prueba1/Prueba1/Server/wwwroot/personas/11a36cba-c557-4b37-a2d8-f7bc861f4b8e.jpg",
+      "PackagePath": "staticwebassets/personas/11a36cba-c557-4b37-a2d8-f7bc861f4b8e.jpg"
+    },
+    {
+      "Id": "/Users/sistemas/Desktop/Folder LuisRomero/Prueba1/Prueba1/Server/wwwroot/personas/150e1a11-1f65-4ffc-a352-a296d8a73da1.jpeg",
+      "PackagePath": "staticwebassets/personas/150e1a11-1f65-4ffc-a352-a296d8a73da1.jpeg"
+    },
+    {
+      "Id": "/Users/sistemas/Desktop/Folder LuisRomero/Prueba1/Prueba1/Server/wwwroot/personas/1dcf5621-5959-42de-92e5-6385adfd7b21.jpeg",
+      "PackagePath": "staticwebassets/personas/1dcf5621-5959-42de-92e5-6385adfd7b21.jpeg"
+    },
+    {
+      "Id": "/Users/sistemas/Desktop/Folder LuisRomero/Prueba1/Prueba1/Server/wwwroot/personas/2d0ac085-0399-4f57-97ab-96ae74658ff3.jpeg",
+      "PackagePath": "staticwebassets/personas/2d0ac085-0399-4f57-97ab-96ae74658ff3.jpeg"
+    },
+    {
+      "Id": "/Users/sistemas/Desktop/Folder LuisRomero/Prueba1/Prueba1/Server/wwwroot/personas/2d2212d6-73f7-4313-b481-7802284e6fe9.jpeg",
+      "PackagePath": "staticwebassets/personas/2d2212d6-73f7-4313-b481-7802284e6fe9.jpeg"
+    },
+    {
+      "Id": "/Users/sistemas/Desktop/Folder LuisRomero/Prueba1/Prueba1/Server/wwwroot/personas/2f0eb7a2-397e-4258-92ee-84b483c854b7.jpg",
+      "PackagePath": "staticwebassets/personas/2f0eb7a2-397e-4258-92ee-84b483c854b7.jpg"
+    },
+    {
+      "Id": "/Users/sistemas/Desktop/Folder LuisRomero/Prueba1/Prueba1/Server/wwwroot/personas/30deb767-a5dc-4475-9ba3-b02bafab6bf6.jpeg",
+      "PackagePath": "staticwebassets/personas/30deb767-a5dc-4475-9ba3-b02bafab6bf6.jpeg"
+    },
+    {
+      "Id": "/Users/sistemas/Desktop/Folder LuisRomero/Prueba1/Prueba1/Server/wwwroot/personas/36ef17e1-aaeb-4354-b42d-2f59d27e8fc5.jpg",
+      "PackagePath": "staticwebassets/personas/36ef17e1-aaeb-4354-b42d-2f59d27e8fc5.jpg"
+    },
+    {
+      "Id": "/Users/sistemas/Desktop/Folder LuisRomero/Prueba1/Prueba1/Server/wwwroot/personas/3736c159-cf49-4819-94f6-802ca971895e.jpeg",
+      "PackagePath": "staticwebassets/personas/3736c159-cf49-4819-94f6-802ca971895e.jpeg"
+    },
+    {
+      "Id": "/Users/sistemas/Desktop/Folder LuisRomero/Prueba1/Prueba1/Server/wwwroot/personas/4ce6c4f4-3ba7-4494-acd4-dca43bbecc38.jpg",
+      "PackagePath": "staticwebassets/personas/4ce6c4f4-3ba7-4494-acd4-dca43bbecc38.jpg"
+    },
+    {
       "Id": "/Users/sistemas/Desktop/Folder LuisRomero/Prueba1/Prueba1/Server/wwwroot/personas/6fadbc95-3334-499f-9dcd-93d56cc0a352.jpeg",
       "PackagePath": "staticwebassets/personas/6fadbc95-3334-499f-9dcd-93d56cc0a352.jpeg"
+    },
+    {
+      "Id": "/Users/sistemas/Desktop/Folder LuisRomero/Prueba1/Prueba1/Server/wwwroot/personas/8430b0dc-2df0-4cfa-9181-8560a265701f.jpeg",
+      "PackagePath": "staticwebassets/personas/8430b0dc-2df0-4cfa-9181-8560a265701f.jpeg"
+    },
+    {
+      "Id": "/Users/sistemas/Desktop/Folder LuisRomero/Prueba1/Prueba1/Server/wwwroot/personas/84d90d98-c6c7-4a54-9d6b-e0118bc1b7b0.jpeg",
+      "PackagePath": "staticwebassets/personas/84d90d98-c6c7-4a54-9d6b-e0118bc1b7b0.jpeg"
+    },
+    {
+      "Id": "/Users/sistemas/Desktop/Folder LuisRomero/Prueba1/Prueba1/Server/wwwroot/personas/8b1438f5-6d76-4cf5-9d85-6ad35238c245.jpeg",
+      "PackagePath": "staticwebassets/personas/8b1438f5-6d76-4cf5-9d85-6ad35238c245.jpeg"
+    },
+    {
+      "Id": "/Users/sistemas/Desktop/Folder LuisRomero/Prueba1/Prueba1/Server/wwwroot/personas/8cf889c1-25b9-41bd-8595-ba7fe2d8484e.jpeg",
+      "PackagePath": "staticwebassets/personas/8cf889c1-25b9-41bd-8595-ba7fe2d8484e.jpeg"
+    },
+    {
+      "Id": "/Users/sistemas/Desktop/Folder LuisRomero/Prueba1/Prueba1/Server/wwwroot/personas/9557a1c5-5deb-43ad-832c-553543c10be3.jpeg",
+      "PackagePath": "staticwebassets/personas/9557a1c5-5deb-43ad-832c-553543c10be3.jpeg"
+    },
+    {
+      "Id": "/Users/sistemas/Desktop/Folder LuisRomero/Prueba1/Prueba1/Server/wwwroot/personas/9775b353-cc49-41f6-97f9-34a4109f61e4.jpeg",
+      "PackagePath": "staticwebassets/personas/9775b353-cc49-41f6-97f9-34a4109f61e4.jpeg"
+    },
+    {
+      "Id": "/Users/sistemas/Desktop/Folder LuisRomero/Prueba1/Prueba1/Server/wwwroot/personas/ab43cc4e-cfed-487e-8fde-7f22bb0d6f25.jpeg",
+      "PackagePath": "staticwebassets/personas/ab43cc4e-cfed-487e-8fde-7f22bb0d6f25.jpeg"
+    },
+    {
+      "Id": "/Users/sistemas/Desktop/Folder LuisRomero/Prueba1/Prueba1/Server/wwwroot/personas/bc55ff54-8bb0-4bf4-8dea-be14c9b049bd.jpeg",
+      "PackagePath": "staticwebassets/personas/bc55ff54-8bb0-4bf4-8dea-be14c9b049bd.jpeg"
+    },
+    {
+      "Id": "/Users/sistemas/Desktop/Folder LuisRomero/Prueba1/Prueba1/Server/wwwroot/personas/bd64b35e-7d41-442c-8041-d270d4e6e5f5.jpeg",
+      "PackagePath": "staticwebassets/personas/bd64b35e-7d41-442c-8041-d270d4e6e5f5.jpeg"
+    },
+    {
+      "Id": "/Users/sistemas/Desktop/Folder LuisRomero/Prueba1/Prueba1/Server/wwwroot/personas/befcfa81-a709-4fa0-8f3e-8b51c992a231.jpeg",
+      "PackagePath": "staticwebassets/personas/befcfa81-a709-4fa0-8f3e-8b51c992a231.jpeg"
+    },
+    {
+      "Id": "/Users/sistemas/Desktop/Folder LuisRomero/Prueba1/Prueba1/Server/wwwroot/personas/c18d6029-d768-4be9-b34e-b7fe0f088008.jpeg",
+      "PackagePath": "staticwebassets/personas/c18d6029-d768-4be9-b34e-b7fe0f088008.jpeg"
+    },
+    {
+      "Id": "/Users/sistemas/Desktop/Folder LuisRomero/Prueba1/Prueba1/Server/wwwroot/personas/c466be6f-dddf-449a-83b8-8fd9cf5cd33f.jpeg",
+      "PackagePath": "staticwebassets/personas/c466be6f-dddf-449a-83b8-8fd9cf5cd33f.jpeg"
+    },
+    {
+      "Id": "/Users/sistemas/Desktop/Folder LuisRomero/Prueba1/Prueba1/Server/wwwroot/personas/c6401fc4-3dd3-4803-88ac-b7d4768d6f64.jpeg",
+      "PackagePath": "staticwebassets/personas/c6401fc4-3dd3-4803-88ac-b7d4768d6f64.jpeg"
+    },
+    {
+      "Id": "/Users/sistemas/Desktop/Folder LuisRomero/Prueba1/Prueba1/Server/wwwroot/personas/ccf87d3b-8485-475f-a6b7-31a8887c8554.jpg",
+      "PackagePath": "staticwebassets/personas/ccf87d3b-8485-475f-a6b7-31a8887c8554.jpg"
+    },
+    {
+      "Id": "/Users/sistemas/Desktop/Folder LuisRomero/Prueba1/Prueba1/Server/wwwroot/personas/dfc6200b-4b64-4e9d-891d-64088086fe00.jpeg",
+      "PackagePath": "staticwebassets/personas/dfc6200b-4b64-4e9d-891d-64088086fe00.jpeg"
+    },
+    {
+      "Id": "/Users/sistemas/Desktop/Folder LuisRomero/Prueba1/Prueba1/Server/wwwroot/personas/e3e55629-1042-4a3f-a62b-e732c5047fc5.jpeg",
+      "PackagePath": "staticwebassets/personas/e3e55629-1042-4a3f-a62b-e732c5047fc5.jpeg"
+    },
+    {
+      "Id": "/Users/sistemas/Desktop/Folder LuisRomero/Prueba1/Prueba1/Server/wwwroot/personas/e57d8b3b-7255-47c3-881e-9e31b82b8708.jpeg",
+      "PackagePath": "staticwebassets/personas/e57d8b3b-7255-47c3-881e-9e31b82b8708.jpeg"
+    },
+    {
+      "Id": "/Users/sistemas/Desktop/Folder LuisRomero/Prueba1/Prueba1/Server/wwwroot/personas/e6120213-18a9-4e0d-9079-6ac494f5afee.jpeg",
+      "PackagePath": "staticwebassets/personas/e6120213-18a9-4e0d-9079-6ac494f5afee.jpeg"
+    },
+    {
+      "Id": "/Users/sistemas/Desktop/Folder LuisRomero/Prueba1/Prueba1/Server/wwwroot/personas/e6d58758-4d95-47f1-ab8e-9193cd919bbb.jpeg",
+      "PackagePath": "staticwebassets/personas/e6d58758-4d95-47f1-ab8e-9193cd919bbb.jpeg"
+    },
+    {
+      "Id": "/Users/sistemas/Desktop/Folder LuisRomero/Prueba1/Prueba1/Server/wwwroot/personas/ea1cbac7-ab48-444b-b001-b90121924021.jpeg",
+      "PackagePath": "staticwebassets/personas/ea1cbac7-ab48-444b-b001-b90121924021.jpeg"
+    },
+    {
+      "Id": "/Users/sistemas/Desktop/Folder LuisRomero/Prueba1/Prueba1/Server/wwwroot/personas/eb922d52-7218-4f4b-abc0-ad993c144aec.jpeg",
+      "PackagePath": "staticwebassets/personas/eb922d52-7218-4f4b-abc0-ad993c144aec.jpeg"
+    },
+    {
+      "Id": "/Users/sistemas/Desktop/Folder LuisRomero/Prueba1/Prueba1/Server/wwwroot/personas/f217c308-95cb-430b-8bb2-71f343c2cb0b.jpeg",
+      "PackagePath": "staticwebassets/personas/f217c308-95cb-430b-8bb2-71f343c2cb0b.jpeg"
+    },
+    {
+      "Id": "/Users/sistemas/Desktop/Folder LuisRomero/Prueba1/Prueba1/Server/wwwroot/personas/f968c6a9-e61b-489c-b5de-fdf21243ddcb.jpeg",
+      "PackagePath": "staticwebassets/personas/f968c6a9-e61b-489c-b5de-fdf21243ddcb.jpeg"
+    },
+    {
+      "Id": "/Users/sistemas/Desktop/Folder LuisRomero/Prueba1/Prueba1/Server/wwwroot/personas/ff57b0d4-2860-49a4-bfaf-2a16e0ed098b.jpeg",
+      "PackagePath": "staticwebassets/personas/ff57b0d4-2860-49a4-bfaf-2a16e0ed098b.jpeg"
     },
     {
       "Id": "obj/Debug/net7.0/staticwebassets/msbuild.Prueba1.Server.Microsoft.AspNetCore.StaticWebAssets.props",

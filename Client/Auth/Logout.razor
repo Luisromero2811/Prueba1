@@ -1,0 +1,15 @@
+﻿@page "/logout"
+@using Prueba1.Client.Auth;
+@inject ILoginService loginService
+@inject NavigationManager navigationManager
+
+<p>Deslogueando...</p>
+@code {
+    //Al momento de correr el deslogueo, lo hacemos directo del ciclo de vida OnInitialized
+    protected override async Task OnInitializedAsync()
+    {
+        await loginService.Logout();
+        navigationManager.NavigateTo("");
+    }
+}
+

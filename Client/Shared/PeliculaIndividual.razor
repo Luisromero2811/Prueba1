@@ -8,13 +8,16 @@
             @Pelicula.Titulo
         </a>
     </p>
-    <div>
-        <a class="btn btn-info">Editar</a>
-        <button class="btn btn-danger" type="button"
-                @onclick=@(() => EliminarPelicula.InvokeAsync(Pelicula))>
-            Borrar
-        </button>
-    </div>
+    <AuthorizeView Roles="admin">
+        <div>
+            <a class="btn btn-info" href="peliculas/editar/@Pelicula.Id">Editar</a>
+            <button class="btn btn-danger" type="button"
+                    @onclick=@(() => EliminarPelicula.InvokeAsync(Pelicula))>
+                Borrar
+            </button>
+        </div>
+    </AuthorizeView>
+
 </div>
 
 @code {
@@ -27,7 +30,7 @@
     private string urlPelicula = string.Empty;
     protected override void OnInitialized()
     {
-        urlPelicula = $"pelicula/";
+        urlPelicula = $"pelicula/{Pelicula.Id}/{Pelicula.Titulo.Replace(" ", "-")}";
     }
 
 }

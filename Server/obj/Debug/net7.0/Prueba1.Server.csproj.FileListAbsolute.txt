@@ -15,6 +15,8 @@
 /Users/sistemas/Desktop/Folder LuisRomero/Prueba1/Prueba1/Server/bin/Debug/net7.0/Prueba1.Server.runtimeconfig.json
 /Users/sistemas/Desktop/Folder LuisRomero/Prueba1/Prueba1/Server/bin/Debug/net7.0/Prueba1.Server.dll
 /Users/sistemas/Desktop/Folder LuisRomero/Prueba1/Prueba1/Server/bin/Debug/net7.0/Prueba1.Server.pdb
+/Users/sistemas/Desktop/Folder LuisRomero/Prueba1/Prueba1/Server/bin/Debug/net7.0/AutoMapper.dll
+/Users/sistemas/Desktop/Folder LuisRomero/Prueba1/Prueba1/Server/bin/Debug/net7.0/AutoMapper.Extensions.Microsoft.DependencyInjection.dll
 /Users/sistemas/Desktop/Folder LuisRomero/Prueba1/Prueba1/Server/bin/Debug/net7.0/Azure.Core.dll
 /Users/sistemas/Desktop/Folder LuisRomero/Prueba1/Prueba1/Server/bin/Debug/net7.0/Azure.Identity.dll
 /Users/sistemas/Desktop/Folder LuisRomero/Prueba1/Prueba1/Server/bin/Debug/net7.0/Blazored.Typeahead.dll
@@ -22,12 +24,18 @@
 /Users/sistemas/Desktop/Folder LuisRomero/Prueba1/Prueba1/Server/bin/Debug/net7.0/Humanizer.dll
 /Users/sistemas/Desktop/Folder LuisRomero/Prueba1/Prueba1/Server/bin/Debug/net7.0/Markdig.dll
 /Users/sistemas/Desktop/Folder LuisRomero/Prueba1/Prueba1/Server/bin/Debug/net7.0/MathNet.Numerics.dll
+/Users/sistemas/Desktop/Folder LuisRomero/Prueba1/Prueba1/Server/bin/Debug/net7.0/Microsoft.AspNetCore.Authentication.JwtBearer.dll
 /Users/sistemas/Desktop/Folder LuisRomero/Prueba1/Prueba1/Server/bin/Debug/net7.0/Microsoft.AspNetCore.Authorization.dll
 /Users/sistemas/Desktop/Folder LuisRomero/Prueba1/Prueba1/Server/bin/Debug/net7.0/Microsoft.AspNetCore.Components.dll
+/Users/sistemas/Desktop/Folder LuisRomero/Prueba1/Prueba1/Server/bin/Debug/net7.0/Microsoft.AspNetCore.Components.Authorization.dll
 /Users/sistemas/Desktop/Folder LuisRomero/Prueba1/Prueba1/Server/bin/Debug/net7.0/Microsoft.AspNetCore.Components.Forms.dll
 /Users/sistemas/Desktop/Folder LuisRomero/Prueba1/Prueba1/Server/bin/Debug/net7.0/Microsoft.AspNetCore.Components.Web.dll
 /Users/sistemas/Desktop/Folder LuisRomero/Prueba1/Prueba1/Server/bin/Debug/net7.0/Microsoft.AspNetCore.Components.WebAssembly.dll
+/Users/sistemas/Desktop/Folder LuisRomero/Prueba1/Prueba1/Server/bin/Debug/net7.0/Microsoft.AspNetCore.Components.WebAssembly.Authentication.dll
 /Users/sistemas/Desktop/Folder LuisRomero/Prueba1/Prueba1/Server/bin/Debug/net7.0/Microsoft.AspNetCore.Components.WebAssembly.Server.dll
+/Users/sistemas/Desktop/Folder LuisRomero/Prueba1/Prueba1/Server/bin/Debug/net7.0/Microsoft.AspNetCore.Cryptography.Internal.dll
+/Users/sistemas/Desktop/Folder LuisRomero/Prueba1/Prueba1/Server/bin/Debug/net7.0/Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+/Users/sistemas/Desktop/Folder LuisRomero/Prueba1/Prueba1/Server/bin/Debug/net7.0/Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
 /Users/sistemas/Desktop/Folder LuisRomero/Prueba1/Prueba1/Server/bin/Debug/net7.0/Microsoft.AspNetCore.Metadata.dll
 /Users/sistemas/Desktop/Folder LuisRomero/Prueba1/Prueba1/Server/bin/Debug/net7.0/Microsoft.Bcl.AsyncInterfaces.dll
 /Users/sistemas/Desktop/Folder LuisRomero/Prueba1/Prueba1/Server/bin/Debug/net7.0/Microsoft.Data.SqlClient.dll
@@ -38,6 +46,9 @@
 /Users/sistemas/Desktop/Folder LuisRomero/Prueba1/Prueba1/Server/bin/Debug/net7.0/Microsoft.EntityFrameworkCore.SqlServer.dll
 /Users/sistemas/Desktop/Folder LuisRomero/Prueba1/Prueba1/Server/bin/Debug/net7.0/Microsoft.Extensions.Configuration.Binder.dll
 /Users/sistemas/Desktop/Folder LuisRomero/Prueba1/Prueba1/Server/bin/Debug/net7.0/Microsoft.Extensions.DependencyModel.dll
+/Users/sistemas/Desktop/Folder LuisRomero/Prueba1/Prueba1/Server/bin/Debug/net7.0/Microsoft.Extensions.Identity.Core.dll
+/Users/sistemas/Desktop/Folder LuisRomero/Prueba1/Prueba1/Server/bin/Debug/net7.0/Microsoft.Extensions.Identity.Stores.dll
+/Users/sistemas/Desktop/Folder LuisRomero/Prueba1/Prueba1/Server/bin/Debug/net7.0/Microsoft.Extensions.Options.dll
 /Users/sistemas/Desktop/Folder LuisRomero/Prueba1/Prueba1/Server/bin/Debug/net7.0/Microsoft.Identity.Client.dll
 /Users/sistemas/Desktop/Folder LuisRomero/Prueba1/Prueba1/Server/bin/Debug/net7.0/Microsoft.Identity.Client.Extensions.Msal.dll
 /Users/sistemas/Desktop/Folder LuisRomero/Prueba1/Prueba1/Server/bin/Debug/net7.0/Microsoft.IdentityModel.Abstractions.dll

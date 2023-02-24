@@ -2,6 +2,8 @@
 @inject NavigationManager navigationManager
 @inject IRepositorio repositorio
 @inject SweetAlertService swal
+@using Microsoft.AspNetCore.Authorization;
+@attribute [Authorize(Roles = "admin")]
 
 
 <FormularioActores OnValidSubmit="Crear" Actores="Actor"></FormularioActores>

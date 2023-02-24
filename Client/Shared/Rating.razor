@@ -1,0 +1,35 @@
+﻿@for (int i = 1; i <= MaximoPuntaje; i++)
+{
+    //Se guarda el valor del indice en un nueva variable para poder pasar el argumento a diferentes funcs
+    var numeroEstrella = i;
+    //Evento a ejecutarse cuando se le de por encima el mouse y se de click a la estrella
+    <span @onclick="@(() => onClickHandle(numeroEstrella))"
+          @onmouseover="@(() => onMouseOverHandle(numeroEstrella))"
+          style="cursor: pointer"
+          class="fa fa-star @(PuntajeSeleccionado >=i ? "checked" : null)"></span>
+
+}
+
+@code {
+    [Parameter] public int MaximoPuntaje { get; set; }
+    [Parameter] public int PuntajeSeleccionado { get; set; }
+    [Parameter] public EventCallback<int> OnRating { get; set; }
+    private bool votado = false;
+
+    private async Task onClickHandle(int numeroEstrella)
+    {
+        PuntajeSeleccionado = numeroEstrella;
+        votado = true;
+        await OnRating.InvokeAsync(PuntajeSeleccionado);
+    }
+    private void onMouseOverHandle(int numeroEstrella)
+    {
+        if (!votado)
+        {
+            PuntajeSeleccionado = numeroEstrella;
+        }
+    }
+}
+
+<!--Funcion para cuando el mouse este por encima de la estrella-->
+<!--Si el puntaje seleccionado es mayor o igual al indice se le atribuye como checked a las estrellas que estan a la izquierda y a la que se seleccione-->

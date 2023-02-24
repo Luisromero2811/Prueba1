@@ -1,33 +1,46 @@
 ﻿@inject IJSRuntime js
+@inject SweetAlertService swal
+@inject IRepositorio repositorio
+
 
 <ListadoGenerico Listado="Peliculas">
     <HayRegistros>
         <PeliculaIndividual Pelicula="context"
-                            EliminarPelicula="EliminarPelicula">
+                            EliminarPelicula="EliminarPelicula" @key="context.Id">
         </PeliculaIndividual>
     </HayRegistros>
 </ListadoGenerico>
-       
-    
+
+
 
 @code {
 
     [Parameter]
     [EditorRequired]
     public List<BlazorPeliculas>? Peliculas { get; set; }
-   
- 
+
+
     private async Task EliminarPelicula(BlazorPeliculas pelicula)
     {
         var confirmado = await js.InvokeAsync<bool>("confirm",
             $"Desea borrar la pelicula {pelicula.Titulo}?");
-        if(confirmado)
+
+        if (confirmado)
         {
-            Peliculas!.Remove(pelicula);
+            var responseHttp = await repositorio.Delete($"api/peliculas/{pelicula.Id}");
+            if (responseHttp.Error)
+            {
+                var mensajeError = await responseHttp.ObtenerMensajeError();
+                await swal.FireAsync("Error", mensajeError, SweetAlertIcon.Error);
+            }
+            else
+            {
+                Peliculas!.Remove(pelicula);
+            }
         }
 
 
     }
-
+//El atributo key es utilizado cuando se obtiene una lista de elementos, para que con su key.id pueda reconocer a cual elemento estaremos accediendo
 }
 

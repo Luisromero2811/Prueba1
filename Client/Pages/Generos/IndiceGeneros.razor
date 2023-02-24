@@ -1,12 +1,77 @@
 ﻿@page "/generos"
-
-<h3>Índice de Géneros</h3>
+@using Microsoft.AspNetCore.Authorization;
+@inject IRepositorio repositorio
+@inject NavigationManager navigationmanager
+@inject SweetAlertService swal
+@attribute [Authorize(Roles = "admin")]
 
 <div class="mb-3">
     <a class="btn btn-info" href="/generos/crear">Agregar Género</a>
 </div>
 
-@code {
+<ListadoGenerico Listado="Generos">
+    <HayRegistrosCompletos>
+        <table class="table table-stripped">
+            <thead>
+                <tr>
+                    <th></th>
+                    <th>Nombre</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Generos)
+                {
+                    <tr>
+                        <td>
+                            <a class="btn btn-success" href="/generos/editar/@item.Id">Editar</a>
+                            <button type="button" class="btn btn-danger" @onclick=@(() => Borrar(item))>Eliminar</button>
+                        </td>
+                        <td>
+                            @item.Nombre
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </HayRegistrosCompletos>
+</ListadoGenerico>
 
+
+@code {
+    //Necesitamos la lista de los generos
+    public List<Genero> Generos { get; set; }
+    //Necesitamos una carga asyncrona inmediata en la cual obtenemos el listado de generos llamando al method get del repositorio.
+    protected override async Task OnInitializedAsync()
+    {
+        await Cargar();
+    }
+
+    private async Task Cargar()
+    {
+        var respuestaHTTP = await repositorio.Get<List<Genero>>("api/generos");
+        Generos = respuestaHTTP.Response!;
+    }
+
+    private async Task Borrar(Genero genero)
+    {
+        var responseHTTP = await repositorio.Delete($"api/generos/{genero.Id}");
+
+        if (responseHTTP is null)
+        {
+            if (responseHTTP.HttpResponseMessage.StatusCode == System.Net.HttpStatusCode.NotFound)
+            {
+                navigationmanager.NavigateTo("/");
+            }
+            else
+            {
+                var mensajeError = await responseHTTP.ObtenerMensajeError();
+                await swal.FireAsync("Error", mensajeError, SweetAlertIcon.Error);
+            }
+        }
+        else
+        {
+            await Cargar();
+        }
+    }
 }
 

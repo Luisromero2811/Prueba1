@@ -20,6 +20,10 @@ build_property._RazorSourceGeneratorDebug =
 build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
+[/Users/sistemas/Desktop/Folder LuisRomero/Prueba1/Prueba1/Client/Auth/Logout.razor]
+build_metadata.AdditionalFiles.TargetPath = QXV0aC9Mb2dvdXQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
 [/Users/sistemas/Desktop/Folder LuisRomero/Prueba1/Prueba1/Client/Pages/Actores/CrearActor.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQWN0b3Jlcy9DcmVhckFjdG9yLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
@@ -34,6 +38,18 @@ build_metadata.AdditionalFiles.CssScope =
 
 [/Users/sistemas/Desktop/Folder LuisRomero/Prueba1/Prueba1/Client/Pages/Actores/IndiceActores.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQWN0b3Jlcy9JbmRpY2VBY3RvcmVzLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/sistemas/Desktop/Folder LuisRomero/Prueba1/Prueba1/Client/Pages/Auth/EditarUsuario.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQXV0aC9FZGl0YXJVc3VhcmlvLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/sistemas/Desktop/Folder LuisRomero/Prueba1/Prueba1/Client/Pages/Auth/Login.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQXV0aC9Mb2dpbi5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/sistemas/Desktop/Folder LuisRomero/Prueba1/Prueba1/Client/Pages/Auth/Registro.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQXV0aC9SZWdpc3Ryby5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
 [/Users/sistemas/Desktop/Folder LuisRomero/Prueba1/Prueba1/Client/Pages/FetchData.razor]
@@ -80,6 +96,14 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvUGVsaWN1bGFzL1Zpc3VhbGl6YXJQZWxpY3VsYS5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
+[/Users/sistemas/Desktop/Folder LuisRomero/Prueba1/Prueba1/Client/Pages/Usuarios/IndiceUsuarios.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvVXN1YXJpb3MvSW5kaWNlVXN1YXJpb3MucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/sistemas/Desktop/Folder LuisRomero/Prueba1/Prueba1/Client/Shared/EnlacesAuth.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkL0VubGFjZXNBdXRoLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
 [/Users/sistemas/Desktop/Folder LuisRomero/Prueba1/Prueba1/Client/Shared/InputImg.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkL0lucHV0SW1nLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
@@ -100,8 +124,16 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkL01vc3RyYXJNYXJrRG93bi5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
+[/Users/sistemas/Desktop/Folder LuisRomero/Prueba1/Prueba1/Client/Shared/Paginacion.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkL1BhZ2luYWNpb24ucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
 [/Users/sistemas/Desktop/Folder LuisRomero/Prueba1/Prueba1/Client/Shared/PeliculaIndividual.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkL1BlbGljdWxhSW5kaXZpZHVhbC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/sistemas/Desktop/Folder LuisRomero/Prueba1/Prueba1/Client/Shared/Rating.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkL1JhdGluZy5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
 [/Users/sistemas/Desktop/Folder LuisRomero/Prueba1/Prueba1/Client/Shared/SelectorMultiple.razor]

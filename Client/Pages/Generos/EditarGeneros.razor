@@ -1,25 +1,64 @@
 ﻿@page "/generos/editar/{GeneroId:int}"
 @inject NavigationManager navigationManager
-<FormularioGenero @ref="formulariogenero" Genero="Genero" OnValidSubmit="Editar"></FormularioGenero>
+@inject IRepositorio repositorio
+@inject SweetAlertService swal
+@using Microsoft.AspNetCore.Authorization;
+@attribute [Authorize(Roles = "admin")]
+
+<!--Condicion para no mostrar el componente hasta que genero quede nulo -->
+@if (Genero is null)
+{
+    <p>Cargando...</p>
+}
+else
+{
+    <FormularioGenero @ref="formulariogenero" Genero="Genero" OnValidSubmit="Editar"></FormularioGenero>
+}
+
 
 @code {
     [Parameter]
     public int GeneroId { get; set; }
     private Genero? Genero;
 
-    protected override void OnInitialized()
+    protected override async Task OnInitializedAsync()
     {
-        Genero = new Genero() { Id = GeneroId, Nombre = "Comedia" };
+        var respuestaHTTP = await repositorio.Get<Genero>($"api/generos/{GeneroId}");
+        //Si la respuesta de la peticion viene con error
+        if (respuestaHTTP.Error)
+        {
+            //Se el status es NotFound, en automatico va a redirigir a Generos
+            if (respuestaHTTP.HttpResponseMessage.StatusCode == System.Net.HttpStatusCode.NotFound)
+            {
+                navigationManager.NavigateTo("generos");
+            }//Sino, mandara una alerta
+            else
+            {
+                var mensajeError = await respuestaHTTP.ObtenerMensajeError();
+                await swal.FireAsync("Error", mensajeError, SweetAlertIcon.Error);
+            }
+        }
+        else
+        {
+            Genero = respuestaHTTP.Response;
+        }
     }
     private FormularioGenero? formulariogenero;
 
-    private void Editar()
+    private async Task Editar()
     {
-        formulariogenero!.FormularioPosteadoConExito = true;
-        Console.WriteLine("Editado género de la pelicula");
-        Console.WriteLine($"Id: {Genero!.Id}");
-        Console.WriteLine($"Nombre: {Genero.Nombre}");
-        navigationManager.NavigateTo("generos");
+        var respuestaHTTP = await repositorio.Put("api/generos", Genero);
+        if (respuestaHTTP.Error)
+        {
+            var mensajeError = await respuestaHTTP.ObtenerMensajeError();
+            await swal.FireAsync("Error", mensajeError, SweetAlertIcon.Error);
+        }
+        else
+        {
+            formulariogenero!.FormularioPosteadoConExito = true;
+            navigationManager.NavigateTo("generos");
+        }
+
     }
 }
 

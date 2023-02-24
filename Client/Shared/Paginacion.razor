@@ -1,0 +1,94 @@
+﻿<nav>
+    <ul class="pagination justify-content-center">
+        @foreach (var enlace in Enlaces)
+        {
+            <li @onclick=@(() => PaginaSeleccionadaInterno(enlace))
+                style="cursor: pointer"
+                class="page-item @(enlace.Habilitada ? null : "disabled")
+               @(enlace.Activo ? "active" : null)">
+                <a class="page-link">@enlace.Texto</a>
+            </li>
+
+        }
+    </ul>
+</nav>
+
+@code {
+    [Parameter] public int PaginaActual { get; set; } = 1;
+    [Parameter] public int PaginasTotales { get; set; }
+    [Parameter] public int Radio { get; set; } = 3;
+    //Evento para que el usuario ejecute un cambio de item (seleccione una pagina nueva)
+    [Parameter] public EventCallback<int> PaginaSeleccionada { get; set; }
+    List<PaginasModel> Enlaces = new List<PaginasModel>();
+
+    private async Task PaginaSeleccionadaInterno(PaginasModel paginasModel)
+    {
+        if(paginasModel.Pagina == PaginaActual)
+        {
+            return;
+        }
+        if(!paginasModel.Habilitada)
+    {
+            return;
+    }
+        await PaginaSeleccionada.InvokeAsync(paginasModel.Pagina);
+    }
+
+
+    protected override void OnParametersSet()
+    {
+        //Lista de elementos
+        Enlaces = new List<PaginasModel>();
+        //Elementos previous
+        //Si es diferente a uno si esta disponible de lo contrario estará deshabilitado
+        var enlaceAnteriorHabilitado = PaginaActual != 1;
+        //Ejemplo si esta en elemento 3, lo puede regresar al elemento 2
+        var enlaceAnteriorPagina = PaginaActual - 1;
+        //Indicamos los valores al elemento
+        Enlaces.Add(new PaginasModel
+        {
+            Texto = "Anterior",
+            Pagina = enlaceAnteriorPagina,
+            Habilitada = enlaceAnteriorHabilitado
+        }
+            );
+        //Valores númericos
+        for (int i = 1; i <= PaginasTotales; i++)
+        {
+            //Si se encuentra en el intervalo de items, asignale sus propiedades
+            if (i >= PaginaActual - Radio && i <= PaginaActual + Radio)
+            {
+                Enlaces.Add(new PaginasModel
+                {
+                    Pagina = i,
+                    Activo = PaginaActual == i,
+                    Texto = i.ToString()
+                });
+            }
+        }
+        //Elemento next
+        var enlaceSiguienteHabilitado = PaginaActual != PaginasTotales;
+        var enlaceSiguientePagina = PaginaActual + 1;
+        Enlaces.Add(new PaginasModel
+        {
+            Texto = "Siguiente",
+            Pagina = enlaceSiguientePagina,
+            Habilitada = enlaceSiguienteHabilitado
+        });
+
+    }
+
+    // Clase para representar cada elemento de la paginacion
+    class PaginasModel
+    {
+        //Texto definido en el elemento
+        public string Texto { get; set; } = null!;
+        //Pagina que representa
+        public int Pagina { get; set; }
+        //Item habilitado
+        public bool Habilitada { get; set; } = true;
+        //Item Activo
+        public bool Activo { get; set; } = false;
+    }
+}
+
